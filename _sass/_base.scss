@@ -25,7 +25,9 @@ body {
     font-kerning: normal;
 }
 
-
+body::before {
+    background-color: red;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -203,4 +205,15 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+/**
+* Extras
+*/
+
+::selection {
+    background: #5CB275; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: #5CB275; /* Gecko Browsers */
 }

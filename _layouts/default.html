@@ -9,39 +9,45 @@
 
     <div class="page-content">
       <!--<div class="wrapper">-->
-        <div >
-          <div class="site-navbar">
-            <div class="nav-group">
-              <h2>reedk</h2>
-              <a href="#" class="regular">career</a>
-              <p class="light shrink">software developer</p>
-              <p class="light shrink">technical product manager</>
-              <a href="#" class="regular shrink">see more</a>
-            </div>
-            <div class="nav-group">
-              <a href="#" class="regular">freelance</a>
-              <p class="light shrink">photography</p>
-              <p class="light shrink">consulting</p>
-              <a href="#" class="regular shrink">see more</a>
-            </div>
-            <div class="nav-group">
-              <h2>table of contents</h2>
-              <a href="#" class="regular">portfolio projects</a>
+          <div class="site-navbar" style="position: fixed">
+
+            <div class="nav-group" id="toc">
+              <h2 class="lightest">table of contents</h2>
+              <a href="/about/" class="regular">about</a>
               <a href="#" class="regular">articles</a>
-              <a href="#" class="light shrink">programming</a>
               <a href="#" class="light shrink">cheap flights</a>
-              <a href="#" class="regular">about me</a>
+              <a href="#" class="light shrink">programming</a>
+              <a href="#" class="regular">portfolio projects</a>
             </div>
           </div>
-          <div style="width: 66.66666667%; display:inline-block;  position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px;">
+          <div class="content-wrapper">
             {{ content }}
           </div>
+      <div class="site-navbar" style="text-align: left;">
+        <div class="nav-group">
+          <h2 class="lightest"><a href="/">reedk</a></h2>
+          <a href="/career/" class="regular">career</a>
+          <p class="light shrink">software developer</p>
+          <p class="light shrink">technical product manager</p>
+          <a href="/career/" class="regular shrink">see more</a>
         </div>
+        <div class="nav-group">
+          <a href="/contract/" class="regular">contract</a>
+          <p class="light shrink">photography</p>
+          <p class="light shrink">consulting</p>
+          <p class="light shrink">development</p>
+          <a href="/contract/" class="regular shrink">see more</a>
+        </div>
+        <div class="nav-group">
+          <a href="#" class="regular">contact</a>
+        </div>
+      </div>
 
       </div>
+
     <!--</div>-->
 
-    <!--{% include footer.html %}-->
+    {% include footer.html %}
 
   </body>
 
