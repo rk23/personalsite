@@ -2,9 +2,13 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
+    //border-top: 10px solid $grey-color-dark;
+    //border-bottom: 1px solid $grey-color-light;
+    //min-height: 56px;
+    background-color: $grey-color-dark;
+    color: white;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -21,6 +25,37 @@
     &,
     &:visited {
         color: $grey-color-dark;
+    }
+}
+
+.site-navbar {
+    text-align: right;
+    width: 20%;
+    display:inline-block;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    vertical-align: top;
+    margin-top: 50px;
+
+    h2, h3, a, p {margin: 0 0 -3px 0;}
+    h2, h3, .regular {font-variant: small-caps;}
+    h2 {font-size: 26px;}
+    a {color: black; display: block}
+
+    .nav-group {
+        margin-bottom: 10px;
+    }
+    .regular {
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .light {
+        font-weight: 300;
+    }
+    .shrink {
+        font-size: 14px;
     }
 }
 

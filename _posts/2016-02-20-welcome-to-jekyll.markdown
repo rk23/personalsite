@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Reed's Website"
 date:   2016-02-20 20:47:49 -0800
 categories: jekyll update
 ---
