@@ -1,0 +1,150 @@
+---
+permalink: /tractatus/
+---
+
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+<style>
+    .showbtn {
+        /*font-variant: small-caps;*/
+        /*font-weight: 500;*/
+        color: black;
+        cursor: pointer;
+    }
+    .hidebtn {
+        font-variant: small-caps;
+        font-weight: 500;
+        color: black;
+        cursor: pointer;
+    }
+    ol {
+        counter-reset: section;                /* Creates a new instance of the
+                                            section counter with each ol
+                                            element */
+        list-style-type: none;
+    }
+
+    li::before {
+        /*counter-increment: section;            !* Increments only this instance*/
+                                            /*of the section counter *!*/
+        /*content: counters(section,".") " ";    !* Adds the value of all instances*/
+                                            /*of the section counter separated*/
+                                            /*by a ".". *!*/
+        /*!* if you need to support < IE8 then*/
+           /*make sure there is no space after*/
+           /*the ',' *!*/
+        list-style-type: none;
+
+    }
+</style>
+
+
+<div class="page-content">
+    <div class="content-wrapper">
+
+        <h1 style="font-variant: small-caps">reedk</h1>
+        <ol>
+            <li ><a class="showbtn">Hi, I'm Reed</a>
+                <!--<span style="margin-left: 50px;">-->
+                    <!--<a >expand</a>-->
+                    <!--<a class="hidebtn">hide</a>-->
+                <!--</span>-->
+                <ol style="display: none">
+                    <li><a class="showbtn">I'm involved in a few adventure sports</a>
+                        <!--<span style="margin-left: 50px;">-->
+                            <!--<a >expand</a>-->
+                            <!--<a class="hidebtn">hide</a>-->
+                        <!--</span>-->
+                        <ol style="display: none">
+                            <li></li>
+                            <li>SCUBA certified</li>
+                        </ol>
+                    </li>
+                    <li>Avid collector of hobbies</li>
+                </ol>
+            </li>
+            <li><a class="showbtn">I'm a full stack web developer</a>
+                <!--<span style="margin-left: 50px;">-->
+                    <!--<a >expand</a>-->
+                    <!--<a class="hidebtn">hide</a>-->
+                <!--</span>-->
+                <ol style="display: none">
+                    <li><a class="showbtn">Education</a>
+                        <!--<span style="margin-left: 50px;">-->
+                            <!--<a>expand</a>-->
+                            <!--<a class="hidebtn">hide</a>-->
+                        <!--</span>-->
+                        <ol style="display: none">
+                            <li>General Assembly</li>
+                            <li>University of Wisconsin - Madison</li>
+                        </ol>
+                    </li>
+                    <li>Experience</li>
+                    <li>Click on this to grab my resume</li>
+                </ol>
+            </li>
+            <li><a class="showbtn">You can hire me out for contract work as well</a>
+                <!--<span style="margin-left: 50px;">-->
+                    <!--<a >expand</a>-->
+                    <!--<a class="hidebtn">hide</a>-->
+                <!--</span>-->
+                <ol style="display: none">
+                    <li>Consulting: Let's talk about startups and/or web development challenges</li>
+                    <li>Photography: LinkedIn profile pictures</li>
+                    <li>Web Development: I'll build it as best and as fast as I can</li>
+                </ol>
+            </li>
+            <li><a class="showbtn">Or just say hi</a>
+                <!--<span style="margin-left: 50px;">-->
+                    <!--<a class="showbtn">expand</a>-->
+                    <!--<a class="hidebtn">hide</a>-->
+                <!--</span>-->
+                <ol style="display: none">
+                    <li>Stuff</li>
+                    <li>Stuff</li>
+                </ol>
+            </li>
+        </ol>
+
+    </div>
+</div>
+
+
+<script>
+//    document.getElementById("about-show-all").addEventListener("click", function(e, f , g){
+//        e.srcElement.parentNode.nextElementSibling.style.display = "block"
+//    })
+//    document.getElementById("about-hide-all").addEventListener("click", function(e){
+//        e.srcElement.parentNode.nextElementSibling.style.display = "none"
+//    })
+
+    var showbtns = document.getElementsByClassName("showbtn");
+    var hidebtns = document.getElementsByClassName("hidebtn");
+
+    for(var i = 0; i < showbtns.length; i++){
+//        hidebtns[i].style.display = "none";
+        showbtns[i].addEventListener("click", function(e){
+            if (e.srcElement.parentElement.lastElementChild.style.display == 'block'){
+                e.srcElement.parentElement.lastElementChild.style.display = "none";
+            } else {
+                e.srcElement.parentElement.lastElementChild.style.display = "block";
+            }
+        })
+
+    }
+
+
+</script>
+{% include footer.html %}
+
+</body>
+
+</html>
+
+
+

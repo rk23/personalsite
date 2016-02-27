@@ -6,6 +6,7 @@
     //border-bottom: 1px solid $grey-color-light;
     //min-height: 56px;
     background-color: $grey-color-dark;
+    //background-color: white;
     color: white;
     padding: 0 30px;
     position: fixed;
@@ -13,7 +14,7 @@
     right: 0;
     left: 0;
     z-index: 10;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    //box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 
     // Positioning context for the mobile navigation icon
     //position: relative;
@@ -33,28 +34,37 @@
     }
 }
 
+#left-nav {
+    position: fixed;
+    //margin-left: 5%;
+}
+#right-nav {
+    text-align: left;
+    margin-left: 20px;
+}
+
 .site-navbar {
     text-align: right;
-    width: 22%;
+    width: 20%;
     display:inline-block;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
     vertical-align: top;
-    margin-top: 50px;
-    //position: fixed;
+    margin-top: 30px;
 
     h2, h3, a, p {margin: 0 0 -3px 0;}
     h2, h3, .regular {font-variant: small-caps;}
-    h2 {font-size: 26px;}
+    h2 {font-size: 28px;}
     a {color: black; display: block}
+    a:hover {color: #CEA85F}
 
     .nav-group {
         margin-bottom: 10px;
     }
     .regular {
         font-weight: 500;
-        font-size: 18px;
+        font-size: 22px;
     }
     .light {
         font-weight: 300;
@@ -63,7 +73,7 @@
         font-weight: 100;
     }
     .shrink {
-        font-size: 14px;
+        font-size: 16px;
     }
 
 }
@@ -242,7 +252,7 @@
 */
 
 .content-wrapper {
-    width: 40%;
+    width: 50%;
     display:inline-block;
     position: relative;
     min-height: 1px;
