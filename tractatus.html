@@ -9,137 +9,212 @@ permalink: /tractatus/
 
 <body>
 
-<style>
-    .showbtn {
-        /*font-variant: small-caps;*/
-        /*font-weight: 500;*/
-        color: black;
-        cursor: pointer;
-    }
-    .hidebtn {
-        font-variant: small-caps;
-        font-weight: 500;
-        color: black;
-        cursor: pointer;
-    }
-    ol {
-        counter-reset: section;                /* Creates a new instance of the
-                                            section counter with each ol
-                                            element */
-        list-style-type: none;
-    }
+<div class="background row">
 
-    li::before {
-        /*counter-increment: section;            !* Increments only this instance*/
-                                            /*of the section counter *!*/
-        /*content: counters(section,".") " ";    !* Adds the value of all instances*/
-                                            /*of the section counter separated*/
-                                            /*by a ".". *!*/
-        /*!* if you need to support < IE8 then*/
-           /*make sure there is no space after*/
-           /*the ',' *!*/
-        list-style-type: none;
+    <section class="content">
+        <div class="tractatus-wrapper">
 
-    }
-</style>
+            <h1 style="font-variant: small-caps; margin-left: 15px;letter-spacing: 1em; font-size: 30px">reed<span style="color: deepskyblue">k</span></h1>
+            <ol class="level1">
+                <li ><a class="expandable display-article" name="1">Hi, I'm Reed.</a>
+                    <ol class="section1 level2" style="display: none">
+                        <li><a class="display-article" name="1.1">After hours</a></li>
+                        <li><a class="display-article" name="1.2">ENTP</a></li>
+                        <li><a class="expandable" name="1.3">Favorites</a>
+                            <ol class="section1 level3" style="display: none">
+                                <li><a class="display-article" name="1.3.1">Moving pictures</a></li>
+                                <li><a class="display-article" name="1.3.2">Sports Teams</a></li>
+                                <li><a class="display-article" name="1.3.3">Alcoholic Beverages</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+                <li><a class="expandable display-article" name="2">I'm a software developer.</a>
+                    <ol class="section2 level2" style="display: none">
+                        <li><a class="display-article" name="2.1">Technical Education</a></li>
+                        <li><a class="display-article" name="2.2">Experience</a></li>
+                        <li><a class="display-article" name="2.3">Professional Interests</a></li>
+                        <li><a class="expandable">Code Samples</a>
+                            <ol class="section2 level3" style="display: none">
+                                <li>Coming soon</li>
+                            </ol>
+                        </li>
+                        <li><a href="Resume.pdf" download="Resume.pdf">Download</a></li>
+                    </ol>
+                </li>
+                <li><a class="expandable display-article" name="3">Here are my favorite projects,</a>
+                    <ol class="section3 level2" style="display: none">
+                        <li><a class="display-article" name="3.1">Whetstone</a></li>
+                        <li><a class="display-article" name="3.2">Parse</a></li>
+                        <li><a class="display-article" name="3.3">Hobbyhorse</a></li>
+                        <li><a class="display-article" name="3.4">Dominion</a></li>
+                        <!--<li><a class="display-article" name="3.5">Prioritize Travel</a></li>-->
+                        <li><a class="display-article" name="3.6">IoT Bike Tracker</a></li>
+                        <li><a class="display-article" name="3.7">ReedK</a></li>
+                    </ol>
+                </li>
+                <li><a class="expandable display-article" name="4">freelance services I provide,</a>
+                    <ol class="section4 level2" style="display: none">
+                        <li>Web Development</li>
+                        <li>Photography</li>
+                        <li>Consulting</li>
+                    </ol>
+                </li>
+                <li><a class="expandable" name="5">and thoughts on various topics.</a>
+                    <ol class="section5 level2" style="display: none">
+                        <li>Coming soon</li>
+                    </ol>
+                </li>
+                <li><a class="display-article" name="6">Get in touch!</a></li>
+            </ol>
 
+        </div>
+        <section class="content-box">
+            <article id="0">
+                <h3>Welcome</h3>
+                <img src="/images/loki1-bw.png">
+            </article>
+            <article class="nested-article hide" id="1">
+                <h3>Me</h3>
+            </article>
+            <article class="nested-article hide" id="1.1">
+                <h3>After Hours</h3>
+                <!--<p>This site is what I'm calling a customized portfolio where you, the reader, get to select only that which interests you. Each section resembles a section on a normal website such as this first point being about me, the second being my technical chops, the third my portolio and so on.</p>-->
+                <!--<p>For design considerations, please check out section 3.6 where I talk about designing this site.</p>-->
+            </article>
+            <article class="nested-article hide" id="1.2">
+                <h3>ENTP</h3>
+                <p>Coming soon</p>
+            </article>
+            <article class="nested-article hide" id="1.3.1">
+                <h3>Favorite Shows</h3>
+                <p>Lost</p>
+                <p>Breaking Bad</p>
+                <p>Narcos</p>
+                <p>Archer</p>
+                <p>House of Cards</p>
+                <p>The Office</p>
+                <p>Wildfred</p>
+            </article>
+            <article class="nested-article hide" id="1.3.2">
+                <h3>Favorite Sports Teams</h3>
+                <p>None, though I do like watching soccer. The Superbowl is the best day to go snowboarding.</p>
+            </article>
+            <article class="nested-article hide" id="1.3.3">
+                <h3>Alcoholic Beverages</h3>
+                <p>Beer. White Russians. Scotch.</p>
+            </article>
+            <article class="nested-article hide" id="2">
+                <h3>Full stack</h3>
+            </article>
+            <article class="nested-article hide" id="2.1">
+                <h3>Technical Education</h3>
+                <p>I studied computer science in college as a minor, but we didn't learn much about modern web development. After graduation, I worked as a technical product manager solving some web related bugs based on what I knew about validation but knew nothing about what a basic request/response was or where it fit into the web framework.</p><br>
+                <p>I tried learning on my own but all of the tutorials I found lacked consistency; I was getting more confused rather than making any progress into web development. Entering General Assembly, I knew more about how neural nets worked than how to write HTML or CSS. GA provided that consistency where I was able to put all the pieces together. Currently I'm very interested in the asynchrony of Javascript/Node.js and working with large datasets.</p>
+            </article>
+            <article class="nested-article hide" id="2.2" >
+                <h3>Experience</h3>
+                <h4>InHub June 2014 - June 2015</h4>
+                <p>I was the first hire of InHub and actually started out in marketing and email campaigns because of some previous experience. As more bugs in their website became apparent, I was assigned to go through their site and find as many bugs as possible and report them to their web development firm. This wasn't too difficult - because of my knowledge about validations from school I was able to find quite a few.</p><br>
+                <p>However, the web development firm they used was the one that caused the bugs in the first place and we weren't making much progress. Though the site was written in C# and I only had experience in Java and C, I was able to make a couple fixes here and there.</p><br>
+                <p>As my confidence grew, so did my responsibilities. I was reassigned from my marketing duties to take on ownership of the website. Eventually we hired an offshore development team whom I helped in vetting and selecting versus an expensive boutique shop in Chicago. I pushed all bugs I found and couldn't handle myself to them. By the time I left, we were working almost exclusively on enhancements rather than bugs in the website.</p><br>
+                <p>One of the most valuable things I learned was working with co-founders who didn't have a technical background. I didn't have much of one either at the point, but I was able to bridge the gap and explain which enhancements would take too much time for their budget.</p>
+            </article>
+            <article class="nested-article hide" id="2.3" >
+                <h3>Professional Interests</h3>
+                <p>Big data</p>
+                <p>Artificial Intelligence</p>
+                <p>Server side engineering</p>
+                <p>Javascript</p>
+                <p>Python</p>
+                <p>Education-based non-profits</p>
+                <p>Virtual/augmented reality</p>
+            </article>
+            <article class="nested-article hide" id="3" >
+                <h3>Portfolio</h3>
+                <div class="portfolio-pictures" style="background-image: url('/images/whetstone.png');  ">
+                    <div class="picture-overlay">
+                        <p>whetstone - stay motivated on creative projects</p>
+                    </div>
+                </div>
+                <div class="portfolio-pictures" style="background-image: url('/images/parse.png'); ">
+                    <div class="picture-overlay">
+                        <p>parse - applying the pareto principle to language learning</p>
+                    </div>
+                </div>
+                <div class="portfolio-pictures" style="background-image: url('/images/hobbyhorse.png'); ">
+                    <div class="picture-overlay">
+                        <p>hobbyhorse - an interest-based social network</p>
+                    </div>
+                </div>
+                <div class="portfolio-pictures" style="background-image: url('/images/dominion-cover.png');">
+                    <div class="picture-overlay">
+                        <p>dominion - an online rendition of the card game</p>
+                    </div>
+                </div>
+                <!--<div class="portfolio-pictures" style="background-image: url('/images/pt_logo.png'); background-size: contain; background-repeat: no-repeat; background-position: center">-->
+                    <!--<p>.</p>-->
+                <!--</div>-->
+                <div class="portfolio-pictures" style="background-image: url('/images/brn.png');">
+                    <div class="picture-overlay">
+                        <p>bike recovery network - an iot solution to bike theft</p>
+                    </div>
+                </div>
+                <div class="portfolio-pictures" style="background-image: url('/images/reedk.png');">
+                    <div class="picture-overlay">
+                        <p>how i built this site - design considerations</p>
+                    </div>
+                </div>
+            </article>
+            <article class="nested-article hide" id="3.1" >
+                <h3>Whetstone</h3>
+                <p>This is personally my favorite project I co-made at GA. It is something that I actually look forward to using once we reach a point where we can call it an MVP. I worked on it with a friend in the class and we put a lot of time into it. One of the most interesting challenges we faced was working with the asynchrony of node.js and using a synchronous cron job, and if I had to do it over I wouldn't change anything about it. Read below for a description of what it's supposed to do.</p><br>
+                <p>The point is to keep you accountable for some sort of creative/personal goal you set. It's like doing those 30/60 day challenges but with more motivators to get to it. We have the option to invite friends and set a daily "incentive" price. If you don't submit proof of whatever the goal was, then you pay that incentive to the pot and it gets shared among all your friends at the end of your goal.</p><br>
+                <p>So, for example, you could set a goal to paint three times a week for a month with three of your friends. After painting, you take a picture and upload it to our site. It then records that submission and shows it to all the friends in your group so they can keep you accountable as well. If you were to only have submitted 2x in one week, and you had an incentive of $5/day to keep you painting, then you'd pay $5 to the pot to be split with all your friends at the end.</p><br>
+                <p>At the point of writing, the splash page copy hasn't been written yet. Most functionality will have to be seen by registering.</p>
+            </article>
+            <article class="nested-article hide" id="3.2" >
+                <h3>Parse</h3>
+                <p>Coming soon</p>
+            </article>
+            <article class="nested-article hide" id="3.3" >
+                <h3>Hobbyhorse</h3>
+                <p>Coming soon</p>
+            </article>
+            <article class="nested-article hide" id="3.4" >
+                <h3>Dominion</h3>
+                <p>Coming soon</p>
+            </article>
+            <article class="nested-article hide" id="3.5" >
+                <h3>Prioritize Travel</h3>
+                <p>Coming soon</p>
+            </article>
+            <article class="nested-article hide" id="3.6" >
+                <h3>IoT Bike Tracker</h3>
+                <p>Coming soon</p>
+            </article>
+            <article class="nested-article hide" id="3.7" >
+                <h3>My Personal Site</h3>
+                <p>Coming soon</p>
+            </article>
+            <article class="nested-article hide" id="4">
+                <h3>Freelance services</h3>
+            </article>
+            <article class="nested-article hide" id="6">
+                <h3>Get in Touch</h3>
+                <form>
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+                    <textarea title="message" placeholder="message"></textarea><br>
+                    <input type="submit">
+                </form>
+            </article>
+        </section>
 
-<div class="page-content">
-    <div class="content-wrapper">
+    </section>
 
-        <h1 style="font-variant: small-caps">reedk</h1>
-        <ol>
-            <li ><a class="showbtn">Hi, I'm Reed</a>
-                <!--<span style="margin-left: 50px;">-->
-                    <!--<a >expand</a>-->
-                    <!--<a class="hidebtn">hide</a>-->
-                <!--</span>-->
-                <ol style="display: none">
-                    <li><a class="showbtn">I'm involved in a few adventure sports</a>
-                        <!--<span style="margin-left: 50px;">-->
-                            <!--<a >expand</a>-->
-                            <!--<a class="hidebtn">hide</a>-->
-                        <!--</span>-->
-                        <ol style="display: none">
-                            <li></li>
-                            <li>SCUBA certified</li>
-                        </ol>
-                    </li>
-                    <li>Avid collector of hobbies</li>
-                </ol>
-            </li>
-            <li><a class="showbtn">I'm a full stack web developer</a>
-                <!--<span style="margin-left: 50px;">-->
-                    <!--<a >expand</a>-->
-                    <!--<a class="hidebtn">hide</a>-->
-                <!--</span>-->
-                <ol style="display: none">
-                    <li><a class="showbtn">Education</a>
-                        <!--<span style="margin-left: 50px;">-->
-                            <!--<a>expand</a>-->
-                            <!--<a class="hidebtn">hide</a>-->
-                        <!--</span>-->
-                        <ol style="display: none">
-                            <li>General Assembly</li>
-                            <li>University of Wisconsin - Madison</li>
-                        </ol>
-                    </li>
-                    <li>Experience</li>
-                    <li>Click on this to grab my resume</li>
-                </ol>
-            </li>
-            <li><a class="showbtn">You can hire me out for contract work as well</a>
-                <!--<span style="margin-left: 50px;">-->
-                    <!--<a >expand</a>-->
-                    <!--<a class="hidebtn">hide</a>-->
-                <!--</span>-->
-                <ol style="display: none">
-                    <li>Consulting: Let's talk about startups and/or web development challenges</li>
-                    <li>Photography: LinkedIn profile pictures</li>
-                    <li>Web Development: I'll build it as best and as fast as I can</li>
-                </ol>
-            </li>
-            <li><a class="showbtn">Or just say hi</a>
-                <!--<span style="margin-left: 50px;">-->
-                    <!--<a class="showbtn">expand</a>-->
-                    <!--<a class="hidebtn">hide</a>-->
-                <!--</span>-->
-                <ol style="display: none">
-                    <li>Stuff</li>
-                    <li>Stuff</li>
-                </ol>
-            </li>
-        </ol>
-
-    </div>
 </div>
 
-
-<script>
-//    document.getElementById("about-show-all").addEventListener("click", function(e, f , g){
-//        e.srcElement.parentNode.nextElementSibling.style.display = "block"
-//    })
-//    document.getElementById("about-hide-all").addEventListener("click", function(e){
-//        e.srcElement.parentNode.nextElementSibling.style.display = "none"
-//    })
-
-    var showbtns = document.getElementsByClassName("showbtn");
-    var hidebtns = document.getElementsByClassName("hidebtn");
-
-    for(var i = 0; i < showbtns.length; i++){
-//        hidebtns[i].style.display = "none";
-        showbtns[i].addEventListener("click", function(e){
-            if (e.srcElement.parentElement.lastElementChild.style.display == 'block'){
-                e.srcElement.parentElement.lastElementChild.style.display = "none";
-            } else {
-                e.srcElement.parentElement.lastElementChild.style.display = "block";
-            }
-        })
-
-    }
-
-
-</script>
 {% include footer.html %}
 
 </body>
