@@ -23,6 +23,7 @@ article {
   }
   img {
     margin-bottom: 5px;
+    border-radius: 2px;
   }
 }
 .background {
@@ -98,6 +99,11 @@ li::before {
 .content-box img {
   width: 100%;
 }
+#home-img {
+  height: 500px;
+  margin: 0 10%;
+  width: auto;
+}
 .portfolio-pictures {
   width: 100%;
   color: white;
@@ -157,5 +163,8 @@ li::before {
   }
   .portfolio-pictures div p {
     padding: 60px;
+  }
+  #home-img {
+    margin: 0 0;
   }
 }
