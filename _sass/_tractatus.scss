@@ -1,8 +1,18 @@
+//body {
+//  background-color: black;
+//  color: white;
+//}
+
+body {
+  background-color: black;
+}
+
 p {
   margin: 0;
 }
 
 a {
+  //color: white;
   color: black;
   cursor: pointer;
 }
@@ -34,6 +44,7 @@ article {
 .content {
   position: absolute;
   width: 92%;
+  min-height: 87vh;
   left: 50px;
   right: 50px;
   margin-top: 40px;
@@ -42,6 +53,7 @@ article {
   border-bottom: 1px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black;
+  background-color: white;
 }
 ol {
   counter-reset: section;                /* Creates a new instance of the
@@ -67,7 +79,7 @@ li::before {
 .tractatus-wrapper {
   padding-right: 15px;
   padding-left: 15px;
-  margin: 50px 0 0 10%;
+  margin: 50px 0 0 5%;
   font-weight: 100;
   font-size: 20px;
   display: inline-block;
@@ -141,8 +153,20 @@ li::before {
   display: none;
 }
 
-#canvas {
-  margin-top: 20px;
+#space {
+  //border: 1px solid lime;
+  padding: 0;
+  //margin-left: -50px;
+  margin-top: -30px;
+  float: left;
+  //background-color: black;
+  //box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+#planets {
+  padding: 0;
+  //margin-left: -50px;
+  margin-top: -30px;
+  //border: 1px solid yellow;
 }
 
 @media (max-width: 500px) {
@@ -158,9 +182,11 @@ li::before {
   .content-box {
     margin: 0;
     width: 90%;
+    min-height: auto;
   }
   .tractatus-wrapper {
     margin-left: 0;
+    margin-bottom: 100px;
   }
   .portfolio-pictures {
     height: 200px;
@@ -171,8 +197,16 @@ li::before {
   #home-img {
     margin: 0 0;
   }
-  #canvas {
-    width: 336px;
-    height: 224px;
+  #space {
+    width: 100%;
+    height: auto;
+    left: 155px;
+    bottom: 0;
+  }
+  #planets {
+    width: 100%;
+    height: auto;
+    left: 155px;
+    bottom: 0;
   }
 }

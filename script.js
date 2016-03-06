@@ -134,18 +134,6 @@ function canvasApp() {
 
         ctx.clearRect(0, 0, c.width, c.height);
 
-        ctx.beginPath();
-        ctx.arc(300,200,300,0,2*Math.PI);
-        ctx.fillStyle = 'black';
-        ctx.fill();
-        //ctx.fillStyle = 'black';
-        //ctx.fillRect(0, 0, c.width, c.height);
-
-        ctx.beginPath();
-        ctx.arc(300,200,50,0,2*Math.PI);
-        ctx.fillStyle = 'gold';
-        ctx.fill();
-
         mercury.x = mercuryOrbit.centerX + Math.cos(mercuryOrbit.angle) * mercuryOrbit.radius;
         mercury.y = mercuryOrbit.centerY + Math.sin(mercuryOrbit.angle) * mercuryOrbit.radius;
 
@@ -158,20 +146,25 @@ function canvasApp() {
         mars.x = marsOrbit.centerX + Math.cos(marsOrbit.angle) * marsOrbit.radius;
         mars.y = marsOrbit.centerY + Math.sin(marsOrbit.angle) * marsOrbit.radius;
 
+        jupiter.x = jupiterOrbit.centerX + Math.cos(jupiterOrbit.angle) * jupiterOrbit.radius;
+        jupiter.y = jupiterOrbit.centerY + Math.sin(jupiterOrbit.angle) * jupiterOrbit.radius;
+
         mercuryOrbit.angle  += mercury.speed;
         venusOrbit.angle    += venus.speed;
         earthOrbit.angle    += earth.speed;
         marsOrbit.angle     += mars.speed;
+        jupiterOrbit.angle  += jupiter.speed;
+
 
         ctx.fillStyle = mercury.color;
         ctx.beginPath();
-        ctx.arc(mercury.x,mercury.y,1,0,Math.PI*2,true);
+        ctx.arc(mercury.x,mercury.y,2.24,0,Math.PI*2,true);
         ctx.closePath();
         ctx.fill();
 
         ctx.fillStyle = venus.color;
         ctx.beginPath();
-        ctx.arc(venus.x,venus.y,5,0,Math.PI*2,true);
+        ctx.arc(venus.x,venus.y,6,0,Math.PI*2,true);
         ctx.closePath();
         ctx.fill();
 
@@ -187,22 +180,69 @@ function canvasApp() {
         ctx.closePath();
         ctx.fill();
 
+        ctx.fillStyle = jupiter.color;
+        ctx.beginPath();
+        ctx.arc(jupiter.x,jupiter.y,30,0,Math.PI*2,true);
+        ctx.closePath();
+        ctx.fill();
+        //
+        //last = ctx;
     }
 
-    var mercuryOrbit = {centerX: 300, centerY: 200, radius: 70, angle: 0};
-    var mercury = {x: 0, y: 0, speed:.05, color: 'grey'};
+    var centerXOffset = 400;
+    var centerYOffset = 300;
+    if (window.innerWidth < 800){
+        centerXOffset = 400;
+        centerYOffset = 600;
+    }
 
-    var venusOrbit = {centerX: 300, centerY: 200, radius: 85, angle: 0};
-    var venus = {x: 0, y: 0, speed:.01, color: 'orange'};
+    var mercuryOrbit = {centerX: centerXOffset, centerY: centerYOffset, radius: 90, angle: 90};
+    var mercury = {x: 0, y: 0, speed:.0145, color: 'grey'};
 
-    var earthOrbit = {centerX: 300, centerY: 200, radius: 100, angle: 0};
-    var earth = {x: 0, y: 0, speed:.009, color: 'deepskyblue'};
+    var venusOrbit = {centerX: centerXOffset, centerY: centerYOffset, radius: 120, angle: 180};
+    var venus = {x: 0, y: 0, speed:.0056, color: 'orange'};
 
-    var marsOrbit = {centerX: 300, centerY: 200, radius: 125, angle: 0};
-    var mars = {x: 0, y: 0, speed:.005, color: 'firebrick'};
+    var earthOrbit = {centerX: centerXOffset, centerY: centerYOffset, radius: 150, angle: 270};
+    var earth = {x: 0, y: 0, speed:.0035, color: 'deepskyblue'};
 
-    var c = document.getElementById("canvas");
+    var marsOrbit = {centerX: centerXOffset, centerY: centerYOffset, radius: 200, angle: 10};
+    var mars = {x: 0, y: 0, speed:.00186, color: 'firebrick'};
+
+    var jupiterOrbit = {centerX: centerXOffset, centerY: centerYOffset, radius: 310, angle: 10}
+    var jupiter = {x: 0, y: 0, speed:.000235, color: 'tan'}
+
+    var c = document.getElementById("planets");
     var ctx = c.getContext("2d");
+
+    var background = document.getElementById("space");
+    var bctx = background.getContext("2d");
+
+    //bctx.beginPath();
+    //bctx.arc(centerXOffset,centerYOffset,400,0,2*Math.PI);
+    //bctx.fillStyle = 'black';
+    //bctx.fill();
+
+    bctx.fillStyle = 'black';
+    bctx.fillRect(0, 0, c.width, c.height);
+
+    for (i = 0; i < 1000; i++){
+
+        var x = Math.random(c.width) * 1000;
+        var y = Math.random(c.height) * 1000;
+        var radius = Math.random();
+
+        bctx.fillStyle = "white";
+        bctx.beginPath();
+        bctx.arc(x,y,radius,0,Math.PI*2,true);
+        bctx.closePath();
+        bctx.fill();
+    }
+
+    bctx.beginPath();
+    bctx.arc(centerXOffset,centerYOffset,50,0,2*Math.PI);
+    bctx.fillStyle = 'gold';
+    bctx.fill();
+
 
     setInterval(drawScreen, 33);
 
