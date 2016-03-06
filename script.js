@@ -116,128 +116,94 @@ for (i = 0; i < projectImages.length; i++) {
     })
 }
 
-//var c=document.getElementById("myCanvas");
-//var ctx=c.getContext("2d");
-//ctx.beginPath();
-//ctx.moveTo(0,200);
-//ctx.lineTo(5,200);
-//ctx.lineTo(5,210);
-//ctx.lineTo(5,190);
-//ctx.lineTo(20,190);
-//ctx.lineTo(20,215);
-//ctx.lineTo(20,130);
-//ctx.lineTo(60,130);
-//
-//ctx.strokeStyle = 'lime';
-//
-//ctx.stroke();
+window.addEventListener('load', eventWindowLoaded, false);
+function eventWindowLoaded() {
+    canvasApp();
+}
+function canvasSupport () {
+    return !!document.createElement("canvas").getContext;
+}
 
-var c = document.getElementById("canvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(300,200,50,0,2*Math.PI);
-ctx.fillStyle = 'gold';
-ctx.fill();
+function canvasApp() {
 
-ctx.beginPath();
-ctx.arc(300, 200, 70, 0, 2*Math.PI);
-ctx.strokeStyle = 'grey';
-ctx.stroke();
+    if (!canvasSupport()) {
+        return;
+    }
 
-ctx.beginPath();
-ctx.arc(300,270,3,0,2*Math.PI);
-ctx.fillStyle = 'grey';
-ctx.fill();
+    function drawScreen () {
 
-ctx.beginPath();
-ctx.arc(300, 200, 85, 0, 2*Math.PI);
-ctx.strokeStyle = 'orange';
-ctx.stroke();
+        ctx.clearRect(0, 0, c.width, c.height);
 
-ctx.beginPath();
-ctx.arc(385,200,9,0,2*Math.PI);
-ctx.fillStyle = 'orange';
-ctx.fill();
+        ctx.beginPath();
+        ctx.arc(300,200,300,0,2*Math.PI);
+        ctx.fillStyle = 'black';
+        ctx.fill();
+        //ctx.fillStyle = 'black';
+        //ctx.fillRect(0, 0, c.width, c.height);
 
-ctx.beginPath();
-ctx.arc(300, 200, 100, 0, 2*Math.PI);
-ctx.strokeStyle = 'deepskyblue';
-ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(300,200,50,0,2*Math.PI);
+        ctx.fillStyle = 'gold';
+        ctx.fill();
 
-ctx.beginPath();
-ctx.arc(200,200,10,0,2*Math.PI);
-ctx.fillStyle = 'deepskyblue';
-ctx.fill();
+        mercury.x = mercuryOrbit.centerX + Math.cos(mercuryOrbit.angle) * mercuryOrbit.radius;
+        mercury.y = mercuryOrbit.centerY + Math.sin(mercuryOrbit.angle) * mercuryOrbit.radius;
 
-ctx.beginPath();
-ctx.arc(300, 200, 125, 0, 2*Math.PI);
-ctx.strokeStyle = 'firebrick';
-ctx.stroke();
+        venus.x = venusOrbit.centerX + Math.cos(venusOrbit.angle) * venusOrbit.radius;
+        venus.y = venusOrbit.centerY + Math.sin(venusOrbit.angle) * venusOrbit.radius;
 
-ctx.beginPath();
-ctx.arc(300,75,5,0,2*Math.PI);
-ctx.fillStyle = 'firebrick';
-ctx.fill();
+        earth.x = earthOrbit.centerX + Math.cos(earthOrbit.angle) * earthOrbit.radius;
+        earth.y = earthOrbit.centerY + Math.sin(earthOrbit.angle) * earthOrbit.radius;
 
+        mars.x = marsOrbit.centerX + Math.cos(marsOrbit.angle) * marsOrbit.radius;
+        mars.y = marsOrbit.centerY + Math.sin(marsOrbit.angle) * marsOrbit.radius;
 
-ctx.beginPath();
-ctx.arc(300, 200, 190, 0, 2*Math.PI);
-ctx.strokeStyle = 'darkgrey';
-ctx.stroke();
+        mercuryOrbit.angle  += mercury.speed;
+        venusOrbit.angle    += venus.speed;
+        earthOrbit.angle    += earth.speed;
+        marsOrbit.angle     += mars.speed;
 
-//ctx.beginPath();
-//ctx.arc(300, 200, 310, 0, 2*Math.PI);
-//ctx.strokeStyle = 'orange';
-//ctx.stroke();
-//
-//window.addEventListener('load', eventWindowLoaded, false);
-//function eventWindowLoaded() {
-//    canvasApp();
-//
-//}
-//
-//function canvasSupport () {
-//    return !!document.createElement("canvas").getContext;
-//}
-//
-//function canvasApp() {
-//
-//    if (!canvasSupport()) {
-//        return;
-//    }
-//
-//    function  drawScreen () {
-//
-//        context.fillRect(0, 0, theCanvas.width, theCanvas.height);
-//        //Box
-//        context.strokeStyle = '#000000';
-//        context.strokeRect(1,  1, theCanvas.width-2, theCanvas.height-2);
-//
-//        ball.x = circle.centerX + Math.cos(circle.angle) * circle.radius;
-//        ball.y = circle.centerY + Math.sin(circle.angle) * circle.radius;
-//
-//        circle.angle += ball.speed;
-//
-//        context.fillStyle = "#000000";
-//        context.beginPath();
-//        context.arc(ball.x,ball.y,15,0,Math.PI*2,true);
-//        context.closePath();
-//        context.fill();
-//
-//    }
-//
-//    var radius = 100;
-//    var circle = {centerX:250, centerY:250, radius:125, angle:0}
-//    var ball = {x:0, y:0,speed:.1};
-//
-//    var mercury;
-//    var venus;
-//    var earth;
-//    var mars;
-//
-//    theCanvas = document.getElementById("canvas");
-//    context = theCanvas.getContext("2d");
-//
-//    setInterval(drawScreen, 33);
-//
-//}
+        ctx.fillStyle = mercury.color;
+        ctx.beginPath();
+        ctx.arc(mercury.x,mercury.y,1,0,Math.PI*2,true);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = venus.color;
+        ctx.beginPath();
+        ctx.arc(venus.x,venus.y,5,0,Math.PI*2,true);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = earth.color;
+        ctx.beginPath();
+        ctx.arc(earth.x,earth.y,6,0,Math.PI*2,true);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = mars.color;
+        ctx.beginPath();
+        ctx.arc(mars.x,mars.y,3,0,Math.PI*2,true);
+        ctx.closePath();
+        ctx.fill();
+
+    }
+
+    var mercuryOrbit = {centerX: 300, centerY: 200, radius: 70, angle: 0};
+    var mercury = {x: 0, y: 0, speed:.05, color: 'grey'};
+
+    var venusOrbit = {centerX: 300, centerY: 200, radius: 85, angle: 0};
+    var venus = {x: 0, y: 0, speed:.01, color: 'orange'};
+
+    var earthOrbit = {centerX: 300, centerY: 200, radius: 100, angle: 0};
+    var earth = {x: 0, y: 0, speed:.009, color: 'deepskyblue'};
+
+    var marsOrbit = {centerX: 300, centerY: 200, radius: 125, angle: 0};
+    var mars = {x: 0, y: 0, speed:.005, color: 'firebrick'};
+
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+
+    setInterval(drawScreen, 33);
+
+}

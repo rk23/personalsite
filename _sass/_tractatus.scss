@@ -141,6 +141,10 @@ li::before {
   display: none;
 }
 
+#canvas {
+  margin-top: 20px;
+}
+
 @media (max-width: 500px) {
   .background {
     margin: 0 20px;
@@ -166,5 +170,9 @@ li::before {
   }
   #home-img {
     margin: 0 0;
+  }
+  #canvas {
+    width: 336px;
+    height: 224px;
   }
 }
