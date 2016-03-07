@@ -3,9 +3,7 @@
 //  color: white;
 //}
 
-body {
-  background-color: black;
-}
+
 
 p {
   margin: 0;
@@ -49,10 +47,10 @@ article {
   right: 50px;
   margin-top: 40px;
   margin-bottom: 40px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  //border-top: 1px solid black;
+  //border-bottom: 1px solid black;
+  //border-left: 1px solid black;
+  //border-right: 1px solid black;
   background-color: white;
 }
 ol {
@@ -79,11 +77,15 @@ li::before {
 .tractatus-wrapper {
   padding-right: 15px;
   padding-left: 15px;
-  margin: 50px 0 0 5%;
+  margin: 50px 0 0 10%;
   font-weight: 100;
   font-size: 20px;
   display: inline-block;
-  position: static;
+  top: 0;
+  bottom:0;
+  position:fixed;
+  overflow-y:scroll;
+  overflow-x:hidden;
 }
 .level2 {
   font-weight: 300;
@@ -100,13 +102,39 @@ li::before {
 }
 .content-box {
   display: inline-block;
-  margin-left: 50px;
+  margin-left: 500px;
   min-height: 450px;
   vertical-align: top;
-  margin-top: 10px;
+  margin-top: 50px;
   width: 50%;
   padding: 20px;
-  font-weight: 100;
+  //font-weight: 100;
+  font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  color: rgba(0,0,0,.8);
+  //letter-spacing: -.003em
+
+}
+.content-box h1 {
+  font-family: 'Roboto','Lucida Sans Unicode','Lucida Sans',Geneva,Verdana,sans-serif;  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  margin-left: -2.25px;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+}
+.content-box h2 {
+  font-family: 'Roboto','Lucida Sans Unicode','Lucida Sans',Geneva,Verdana,sans-serif;
+  font-weight: 700;
+}
+.content-box h3 {
+   font-family: 'Roboto','Lucida Sans Unicode','Lucida Sans',Geneva,Verdana,sans-serif;
+   font-weight: 500;
+  font-size: 22px;
 }
 .content-box img {
   width: 100%;
@@ -156,16 +184,16 @@ li::before {
 #space {
   //border: 1px solid lime;
   padding: 0;
-  //margin-left: -50px;
-  margin-top: -30px;
+  margin-left: -100px;
+  margin-top: -100px;
   float: left;
   //background-color: black;
   //box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 #planets {
   padding: 0;
-  //margin-left: -50px;
-  margin-top: -30px;
+  margin-left: -100px;
+  margin-top: -100px;
   //border: 1px solid yellow;
 }
 
@@ -179,6 +207,9 @@ li::before {
     width: inherit;
     margin-top: 20px;
   }
+  canvas {
+    margin-top: 10px;
+  }
   .content-box {
     margin: 0;
     width: 90%;
@@ -186,7 +217,8 @@ li::before {
   }
   .tractatus-wrapper {
     margin-left: 0;
-    margin-bottom: 100px;
+    position: relative;
+    //margin-bottom: 100px;
   }
   .portfolio-pictures {
     height: 200px;
@@ -200,13 +232,13 @@ li::before {
   #space {
     width: 100%;
     height: auto;
-    left: 155px;
+    //left: 155px;
     bottom: 0;
   }
   #planets {
     width: 100%;
     height: auto;
-    left: 155px;
+    //left: 155px;
     bottom: 0;
   }
 }
