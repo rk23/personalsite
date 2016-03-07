@@ -75,7 +75,7 @@ function canvasApp() {
     var centerYOffset = 350;
     if (window.innerWidth < 800) {
         centerXOffset = 400;
-        centerYOffset = 600;
+        centerYOffset = 350;
     }
 
     var mercuryOrbit = {centerX: centerXOffset, centerY: centerYOffset, radius: 90, angle: 90};

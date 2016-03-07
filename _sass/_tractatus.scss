@@ -217,6 +217,7 @@ li::before {
   }
   .tractatus-wrapper {
     margin-left: 0;
+    margin-top: 20px;
     position: relative;
     //margin-bottom: 100px;
   }
@@ -232,13 +233,17 @@ li::before {
   #space {
     width: 100%;
     height: auto;
-    //left: 155px;
     bottom: 0;
+    margin-left: -25px;
+    margin-bottom: -70px;
+    overflow: hidden;
   }
   #planets {
     width: 100%;
     height: auto;
-    //left: 155px;
     bottom: 0;
+    margin-left: -25px;
+    margin-bottom: -70px;
+    overflow: hidden;
   }
 }
