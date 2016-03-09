@@ -20,7 +20,7 @@ layout: default
                 <li><a class="display-article" name="1.3.4">Books</a></li>
               </ol>
             </li>
-            <li><a class="display-article" name="1.4">Undergrad</a></li>
+            <li><a href="#1.4" class="display-article" name="1.4">Undergrad</a></li>
             <li><a class="expandable display-article" name="1.5">Hobbies/Interests</a>
               <ol class="section1 level3" style="display: none">
                 <li><a class="display-article" name="1.5.1">Archaeology</a></li>
@@ -57,10 +57,10 @@ layout: default
         </li>
         <li><a class="expandable display-article" name="2">I'm a software developer.</a>
           <ol class="section2 level2" style="display: none">
-            <li><a class="display-article" name="2.1">Technical Education</a></li>
-            <li><a class="display-article" name="2.2">Experience</a></li>
-            <li><a class="display-article" name="2.3">Professional Interests</a></li>
-            <li><a class="expandable display-article" name="2.4">Code Samples</a>
+            <li><a href="#2.1" class="display-article" name="2.1">Technical Education</a></li>
+            <li><a href="#2.2" class="display-article" name="2.2">Experience</a></li>
+            <li><a href="#2.3" class="display-article" name="2.3">Professional Interests</a></li>
+            <li><a href="#2.4" class="expandable display-article" name="2.4">Code Samples</a>
               <ol class="section2 level3" style="display: none">
                 <li><a class="display-article" name="2.4.1">Javascript</a></li>
                 <li><a class="display-article" name="2.4.2">Ruby</a></li>
@@ -124,24 +124,40 @@ layout: default
       </article>
       <article class="nested-article hide" id="1.3.1">
         <h3>TV/Movies</h3>
-        <h5>Shows</h5>
-        <p>Lost</p>
-        <p>Narcos</p>
-        <p>Archer</p>
-        <p>House of Cards</p>
-        <p>The Office</p>
-        <br>
-        <h5>Movies</h5>
-        <p>The Martian</p>
-        <p>Donnie Darko</p>
-        <p>A Separation</p>
-        <p>The Intouchables (FR version)</p>
-        <p>How to Train Your Dragon</p>
-        <p>The Fountain</p>
-        <br>
-        <h5>Documentaries</h5>
-        <p>Life in a Day</p>
-        <p>Living on a Dollar</p>
+        <style>
+          td {
+            vertical-align: top;
+            min-width: 200px;
+          }
+        </style>
+        <table>
+          <tr>
+            <td><h5>Shows</h5></td>
+            <td><h5>Movies</h5></td>
+            <td><h5>Documentaries</h5></td>
+          </tr>
+          <tr>
+            <td>
+              <p>Lost</p>
+              <p>Narcos</p>
+              <p>Archer</p>
+              <p>House of Cards</p>
+              <p>The Office</p>
+            </td>
+            <td>
+              <p>The Martian</p>
+              <p>Donnie Darko</p>
+              <p>A Separation</p>
+              <p>The Intouchables (FR version)</p>
+              <p>How to Train Your Dragon</p>
+              <p>The Fountain</p>
+            </td>
+            <td>
+              <p>Life in a Day</p>
+              <p>Living on a Dollar</p>
+            </td>
+          </tr>
+        </table>
       </article>
       <article class="nested-article hide" id="1.3.2">
         <h3>Sports Teams</h3>
@@ -182,11 +198,12 @@ layout: default
         <p>Data structures was taught in Java and covered, obviously, all the basic data structures such as linked lists, binary search trees, heaps, stacks, etc.</p><br>
         <h4>General Assembly - Web Development Immersive</h4>
         <p>A three-month immersive course starting with building simple static websites to full fledged Node.js / Ruby on Rails web apps and Angular Single Page Applications.</p><br>
-        <p> At the end of the course, we were able to wire up a web server with:</p>
+        <p> At the end of the course, I was able to:</p>
           <ul>
-            <li>Full create/read/update/delete functionality</li>
+            <li>Wire up a web server with full create/read/update/delete functionality</li>
             <li>Data persistence with Postgresql and MongoDb</li>
             <li>Integrate with different APIs without any boilerplate code</li>
+            <li>Deploy web apps to Heroku and AWS Elastic Beanstalk</li>
           </ul>
         <p>Please check out Section 3 for my favorite projects from this course.</p>
       </article>

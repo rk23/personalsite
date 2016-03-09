@@ -7,6 +7,9 @@ a {
   color: black;
   cursor: pointer;
 }
+a:visited {
+  color: black;
+}
 .active {
   background-color: yellow;
 }
