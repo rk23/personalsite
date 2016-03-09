@@ -73,12 +73,12 @@ for (i = 0; i < displayArticles.length; i++){
             targetSection.style.display = "none";
             e.target.classList.remove("active")
             articlesOpened--;
-            if (sectionNumber.indexOf("3.") !== -1){
-                portfolioOpenCount--;
-            }
-            else if (sectionNumber === "3"){
-                flag = true;
-            }
+            //if (sectionNumber.indexOf("3.") !== -1){
+            //    portfolioOpenCount--;
+            //}
+            //else if (sectionNumber === "3"){
+            //    flag = true;
+            //}
         } else {
             targetSection.style.display = "block";
             e.target.classList.add("active");
@@ -87,24 +87,24 @@ for (i = 0; i < displayArticles.length; i++){
             //   //targetSection.style.backgroundColor = "#f9f9f9";
             //}
             //alternateBackground = !alternateBackground;
-            if (sectionNumber.indexOf("3.") !== -1){
-                portfolioOpenCount++;
-            }
+            //if (sectionNumber.indexOf("3.") !== -1){
+            //    portfolioOpenCount++;
+            //}
         }
-
-        portfolioList.parentElement.lastElementChild.style.display == "none" ? isPortfolioOpen = false : isPortfolioOpen = true;
-
-        if (portfolioArticle.style.display == "block" && sectionNumber.indexOf("3.") !== -1 && portfolioOpenCount > 0){
-            portfolioArticle.style.display = "none";
-            portfolioList.classList.remove("active");
-        }
-        else if (portfolioOpenCount == 0
-            && isPortfolioOpen
-            && !flag
-            && sectionNumber.indexOf("3.") !== -1){
-            portfolioArticle.style.display = "block";
-            portfolioList.classList.add("active");
-        }
+        //
+        //portfolioList.parentElement.lastElementChild.style.display == "none" ? isPortfolioOpen = false : isPortfolioOpen = true;
+        //
+        //if (portfolioArticle.style.display == "block" && sectionNumber.indexOf("3.") !== -1 && portfolioOpenCount > 0){
+        //    portfolioArticle.style.display = "none";
+        //    portfolioList.classList.remove("active");
+        //}
+        //else if (portfolioOpenCount == 0
+        //    && isPortfolioOpen
+        //    && !flag
+        //    && sectionNumber.indexOf("3.") !== -1){
+        //    portfolioArticle.style.display = "block";
+        //    portfolioList.classList.add("active");
+        //}
 
         displayWelcome();
     })
