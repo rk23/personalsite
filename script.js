@@ -12,7 +12,6 @@ var section5        = document.getElementsByClassName("section5");
 var sections        = [section1, section2, section3, section4, section5];
 var articlesOpened  = 0;
 var portfolioOpenCount  = 0;
-//var alternateBackground = false;
 var portfolioArticle    = document.getElementById('3');
 
 var doTransition = function(elem, apply){
@@ -53,18 +52,18 @@ var hideAll = function(elems, sectionNumber){
 };
 
 for (var i = 0; i < expandables.length; i++){
-    expandables[i].addEventListener("click", function(e){
-        if (e.srcElement.parentElement.lastElementChild.style.display == 'block'){
-            e.srcElement.parentElement.lastElementChild.style.display = "none";
-            hideAll(sections[parseInt(e.srcElement.name) - 1], e.srcElement.name)
+    expandables[i].addEventListener("click", function(e, f, g){
+        if (e.target.parentElement.lastElementChild.style.display == 'block'){
+            e.target.parentElement.lastElementChild.style.display = "none";
+            hideAll(sections[parseInt(e.target.name) - 1], e.target.name)
         } else {
-            e.srcElement.parentElement.lastElementChild.style.display = "block";
+            e.target.parentElement.lastElementChild.style.display = "block";
         }
     })
 }
 for (i = 0; i < displayArticles.length; i++){
     displayArticles[i].addEventListener("click", function(e){
-        var selection           = e.srcElement;
+        var selection           = e.target;
         var sectionNumber       = selection.name;
         var targetSection       = document.getElementById(sectionNumber);
         var flag                = false;
@@ -72,7 +71,7 @@ for (i = 0; i < displayArticles.length; i++){
 
         if(targetSection.style.display == "block" || (sectionNumber == "3" && selection.parentElement.lastElementChild.style.display == "none")){
             targetSection.style.display = "none";
-            e.srcElement.classList.remove("active")
+            e.target.classList.remove("active")
             articlesOpened--;
             if (sectionNumber.indexOf("3.") !== -1){
                 portfolioOpenCount--;
@@ -82,7 +81,7 @@ for (i = 0; i < displayArticles.length; i++){
             }
         } else {
             targetSection.style.display = "block";
-            e.srcElement.classList.add("active");
+            e.target.classList.add("active");
             articlesOpened++;
             //if(alternateBackground){
             //   //targetSection.style.backgroundColor = "#f9f9f9";
@@ -112,9 +111,9 @@ for (i = 0; i < displayArticles.length; i++){
 }
 for (i = 0; i < projectImages.length; i++) {
     projectImages[i].addEventListener("mouseenter", function(e){
-        doTransition(e.srcElement, true)
+        doTransition(e.target, true)
     })
     projectImages[i].addEventListener("mouseleave", function(e){
-        doTransition(e.srcElement, false)
+        doTransition(e.target, false)
     })
 }
