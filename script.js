@@ -121,7 +121,7 @@ employerTrack.addEventListener("click", function(e){
 friendsTrack.addEventListener("click", function(){
     start.style.display = "none";
     startButton.classList.remove("active");
-    openTrack([1, 1.1, 1.3, "1.3.1", "1.3.4", 1.4, 3, 5])
+    openTrack([1, 1.1, "1.3.1", "1.3.4", 1.4, 3, 5])
 })
 
 for (var i = 0; i < expandables.length; i++){

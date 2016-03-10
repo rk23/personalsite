@@ -74,17 +74,9 @@ function canvasApp() {
     var c = document.getElementById("planets");
     var ctx = c.getContext("2d");
 
-
     var background = document.getElementById("space");
     var bctx = background.getContext("2d");
-    //
-    //bctx.beginPath();
-    //bctx.arc(centerXOffset,centerYOffset,400,0,2*Math.PI);
-    //bctx.fillStyle = 'black';
-    //bctx.fill();
 
-    //bctx.fillStyle = 'black';
-    //bctx.fillRect(0, 0, c.width, c.height);
 
     var centerXOffset = 400;
     var centerYOffset = 350;
@@ -92,22 +84,7 @@ function canvasApp() {
         centerXOffset = 400;
         centerYOffset = 350;
     }
-    if (window.location.href.indexOf('404') !== -1){
-        for (i = 0; i < 5000; i++){
 
-            var x = Math.random(c.width) * 2000;
-            var y = Math.random(c.height) * 2000;
-            var radius = Math.random();
-
-            bctx.fillStyle = "white";
-            bctx.beginPath();
-            bctx.arc(x,y,radius,0,Math.PI*2,true);
-            bctx.closePath();
-            bctx.fill();
-        }
-        centerXOffset = 500;
-        centerYOffset = 500;
-    }
 
     bctx.beginPath();
     bctx.arc(centerXOffset, centerYOffset, 50, 0, 2 * Math.PI);
