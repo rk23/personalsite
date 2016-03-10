@@ -1,3 +1,4 @@
+var logo            = document.getElementById("logo");
 var expandables     = document.getElementsByClassName("expandable");
 var displayArticles = document.getElementsByClassName("display-article");
 var projectImages   = document.getElementsByClassName("portfolio-pictures");
@@ -51,8 +52,27 @@ var hideAll = function(elems, sectionNumber){
     displayWelcome()
 };
 
+logo.addEventListener("click", function(e){
+    var highlightedElements = document.getElementsByClassName("active");
+    var heLength            = highlightedElements.length;
+
+    //As I remove the class 'active', the element gets removed from the variable
+    //highlightedElements. So I only access the first element because the list
+    //is auto reducing. Same need for recording the length seperately.
+    for(i = 0; i < heLength; i++){
+        highlightedElements[0].classList.remove("active");
+    }
+    for (i = 0; i < expandables.length; i++){
+        expandables[i].parentElement.lastElementChild.style.display = "none";
+    }
+    for (i = 0; i < articles.length; i++){
+        articles[i].style.display = 'none';
+    }
+    welcomePage.style.display = "block";
+})
+
 for (var i = 0; i < expandables.length; i++){
-    expandables[i].addEventListener("click", function(e, f, g){
+    expandables[i].addEventListener("click", function(e){
         if (e.target.parentElement.lastElementChild.style.display == 'block'){
             e.target.parentElement.lastElementChild.style.display = "none";
             hideAll(sections[parseInt(e.target.name) - 1], e.target.name)
