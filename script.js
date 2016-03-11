@@ -16,8 +16,6 @@ var section5        = document.getElementsByClassName("section5");
 var sections        = [section1, section2, section3, section4, section5];
 var articlesOpened  = 0;
 
-console.log(projectImages)
-
 var displayWelcome = function(){
     if (articlesOpened > 0) {
         welcomePage.style.display = 'none';
@@ -116,7 +114,7 @@ employerTrack.addEventListener("click", function(e){
 friendsTrack.addEventListener("click", function(){
     start.style.display = "none";
     startButton.classList.remove("active");
-    openTrack([1, 1.1, "1.3.1", "1.3.4", 1.4, 3, 5])
+    openTrack([1, 1.1, "1.3.1", "1.3.4", 3, 5])
 })
 
 for (var i = 0; i < expandables.length; i++){

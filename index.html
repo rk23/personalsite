@@ -14,7 +14,7 @@ layout: default
             <li><a href="#1.2" class="display-article" name="1.2">ENTP</a></li>
             <li><a href="#1.3" class="expandable" name="1.3">Favorites</a>
               <ol class="section1 level3" style="display: none">
-                <li><a href="#1.3.1" class="display-article" name="1.3.1">Movies/TV/Docs</a></li>
+                <li><a href="#1.3.1" class="display-article" name="1.3.1">Top TV</a></li>
                 <li><a href="#1.3.2" class="display-article" name="1.3.2">Sports Teams</a></li>
                 <li><a href="#1.3.3" class="display-article" name="1.3.3">Drinks</a></li>
                 <li><a href="#1.3.4" class="display-article" name="1.3.4">Books</a></li>
@@ -68,7 +68,7 @@ layout: default
 
     <section class="content-box">
       <section id="0">
-        <img src="/images/whale.png" style="width: 150%; max-width: 150%; margin-left: -150px;" >
+        <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/whale.png" style="width: 150%; max-width: 150%; margin-left: -150px;" >
         <!--<canvas id="space" width="800px" height="700px" style="position: absolute; z-index: 0">-->
         <!--</canvas>-->
         <!--<canvas id="planets" width="800px" height="700px" style="position: absolute; z-index: 1">-->
@@ -77,7 +77,7 @@ layout: default
       <article class="nested-article hide" id="start">
         <h1>Welcome to my interactive portfolio!</h1>
         <p>First of all, thank you for taking the time to learn more about me. If you want to get started right way, here are some pre-defined paths that will open relevant sections.</p>
-        <div style="text-align: center">
+        <div style="text-align: center; margin-top: 20px">
           <button id="employers" style="display: inline-block; min-width: 45%">Employers</button>
           <button id="friends" style="display: inline-block; min-width: 45%">Friends and Family</button>
         </div>
@@ -96,7 +96,7 @@ layout: default
       </article>
       <article class="nested-article hide" id="1.1">
         <h3>After Hours</h3>
-        <p>When I'm not spending free time with friends or family, I'll usually be working on a new hobby. You can also regularly find me at the Seattle Bouldering Project or the Green Lake neighborhood coffee shops.</p>
+        <p>When I'm not spending free time with my girlfriend and cat, I'll usually be working on a new hobby. You can also regularly find me at the Seattle Bouldering Project or the Green Lake neighborhood coffee shops.</p>
       </article>
       <article class="nested-article hide" id="1.2">
         <h3>ENTP</h3>
@@ -107,7 +107,15 @@ layout: default
         <p>Lists of things I like</p>
       </article>
       <article class="nested-article hide" id="1.3.1">
-        <!--<h3>Movies/TV/Docs</h3>-->
+        <h3>Top TV</h3>
+        <div style="width: 32%; display: inline-block; vertical-align: top; min-width: 150px;">
+          <h5>Shows</h5>
+          <p>Lost</p>
+          <p>Narcos</p>
+          <p>Archer</p>
+          <p>House of Cards</p>
+          <p>The Office</p>
+        </div>
         <div style="width: 32%; display: inline-block; vertical-align: top; min-width: 150px;">
           <h5>Movies</h5>
           <p>The Martian</p>
@@ -116,14 +124,6 @@ layout: default
           <p>The Intouchables</p>
           <p>Interstellar</p>
           <p>The Fountain</p>
-        </div>
-        <div style="width: 32%; display: inline-block; vertical-align: top; min-width: 150px;">
-          <h5>TV</h5>
-          <p>Lost</p>
-          <p>Narcos</p>
-          <p>Archer</p>
-          <p>House of Cards</p>
-          <p>The Office</p>
         </div>
         <div style="width: 32%; display: inline-block; vertical-align: top; min-width: 150px;">
           <h5>Documentaries</h5>
@@ -200,14 +200,14 @@ layout: default
         <h3>Experience</h3>
         <h4>InHub June 2014 - June 2015</h4>
         <p>First hire of five person team startup experience working with an email campaign then moved to testing and debugging their ASP.NET/C# website. Bugs were at first pushed to their web development team but after learning web development on my own, I started fixing some of the bugs myself.</p><br>
-        <p class="underline">Key Deliverables</p>
+        <h5>Key Deliverables</h5>
         <ul>
           <li>Identified over 300 bugs in their site ranging from simple validation to site security.</li>
           <li>Either pushed those bugs to their web dev team or fixed them myself. By the time I left, we were largely working on enhancements.</li>
           <li>Helped vet and select a new web dev firm.</li>
           <li>Managed their database and backups, and developed easy to run scripts to clean up their database.</li>
           <li>Worked with non-technical co-founders by explaining technical challenges and time-saving workarounds.</li>
-        </ul><br>
+        </ul>
         <h4>General Assembly November 2015 - February 2016</h4>
         <p>Please see Section 2.1, Technical Education. This section covers most of my recent experience in web development.</p>
       </article>
@@ -436,38 +436,31 @@ end
         <!--<img src="http://d3g4ccbvy0my5n.cloudfront.net/images/section2-header.png">-->
         <h1>Here are my portfolio projects</h1>
         <div class="portfolio">
-          <h3>Whetstone</h3>
-          <p>Stay motivated on creative projects</p>
+          <h3>Whetstone: <small>Stay motivated on creative projects</small></h3>
           <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/whetstone.png">
         </div>
         <div class="portfolio">
-          <h3>Parse-Lexicon</h3>
-          <p>Applying the Pareto Principle to language learning</p>
+          <h3>Parse-Lexicon: <small>The Pareto Principle in language learning</small></h3>
           <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/parse.png">
         </div>
         <div class="portfolio">
-          <h3>Hobbyhorse</h3>
-          <p>An interest-based social network</p>
+          <h3>Hobbyhorse: <small>An interest-based social network</small></h3>
           <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/hobbyhorse.png">
         </div>
         <div class="portfolio">
-          <h3>Dominion</h3>
-          <p>An online and mobile friendly rendition of the card game</p>
+          <h3>Dominion: <small>A mobile friendly rendition of the card game</small></h3>
           <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/dominion-cover.png">
         </div>
         <div class="portfolio">
-          <h3>OMDB</h3>
-          <p>A simple movie search app</p>
+          <h3>OMDB: <small>A simple movie search app</small></h3>
           <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/omdb.png">
         </div>
         <div class="portfolio">
-          <h3>Bike Recovery Network / Speqtre</h3>
-          <p>An IoT solution to bike theft</p>
+          <h3>Speqtre: <small>An IoT solution to bike theft</small></h3>
           <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/speqtre.png">
         </div>
         <div class="portfolio">
-          <h3>reedkinning.com</h3>
-          <p>How I built this site - design considerations</p>
+          <h3>reedkinning.com: <small>Design considerations</small></h3>
           <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/reedk.png">
         </div>
       </article>
