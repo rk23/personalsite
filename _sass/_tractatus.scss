@@ -30,7 +30,7 @@ a:visited {
   margin-left: 100px;
   margin-top: -100px;
   max-width: 100%;
-  position: fixed;
+  position: absolute;
 }
 #start-button {
   margin-bottom: 200px;
@@ -52,7 +52,7 @@ a:visited {
   border-radius: 5px;
   font-size: 20px;
   //background-color: #4D5ACC;
-  //box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   color: black;
 }
 article {
@@ -178,7 +178,6 @@ ol {
   display: inline-block;
   top: 0;
   bottom:0;
-  z-index: 2;
   position:fixed;
   overflow-y:auto;
   overflow-x:hidden;
@@ -419,7 +418,7 @@ label > .label-body {
     margin-left: 0;
     margin-top: 20px;
     position: relative;
-    overflow-y: visible;
+    overflow-y: hidden;
     background-color: #fdfdfd;
     //margin-bottom: 100px;
   }
@@ -449,13 +448,11 @@ label > .label-body {
     bottom: 15px;
     right:15px;
     background-color: white;
-    z-index: 1;
   }
   #portrait-picture {
     width: 80%;
-    margin-top: -50px;
+    margin-top: 0px;
     max-width: 100%;
-    position: fixed;
     margin-left: 0px;
   }
 }

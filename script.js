@@ -17,17 +17,20 @@ var section5        = document.getElementsByClassName("section5");
 var sections        = [section1, section2, section3, section4, section5];
 var articlesOpened  = 0;
 
+var displayTopButton = function(){
+    if (articlesOpened > 3) {
+        topButton.style.display = 'block'
+    } else {
+        topButton.style.display = 'none'
+    }
+}
 var displayWelcome = function(){
     if (articlesOpened > 0) {
         welcomePage.style.display = 'none';
     } else {
         welcomePage.style.display = 'block';
     }
-    if (articlesOpened > 3) {
-        topButton.style.display = 'block'
-    } else {
-        topButton.style.display = 'none'
-    }
+    displayTopButton()
 };
 var toggleHighlight = function(e){
     var selection           = e.target;
@@ -139,5 +142,6 @@ for (i = 0; i < displayArticles.length; i++){
     displayArticles[i].addEventListener("click", function(e){
         toggleHighlight(e)
         displayWelcome();
+        displayTopButton()
     })
 }
