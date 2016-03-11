@@ -3,7 +3,7 @@ var employerTrack   = document.getElementById("employers");
 var friendsTrack    = document.getElementById("friends");
 var expandables     = document.getElementsByClassName("expandable");
 var displayArticles = document.getElementsByClassName("display-article");
-var projectImages   = document.getElementsByClassName("portfolio-pictures");
+var projectImages   = document.querySelector(".portfolio img");
 var welcomePage     = document.getElementById('0');
 var start           = document.getElementById("start");
 var startButton     = document.getElementById("start-button");
@@ -16,20 +16,8 @@ var section5        = document.getElementsByClassName("section5");
 var sections        = [section1, section2, section3, section4, section5];
 var articlesOpened  = 0;
 
-var image = document.images[0];
-var downloadingImage = new Image();
-downloadingImage.onload = function(){
-    image.src = this.src;
-};
-downloadingImage.src = "http://an.image/to/aynchrounously/download.jpg";
+console.log(projectImages)
 
-var addOverlay = function(elem, apply){
-    if(apply){
-        elem.firstElementChild.style.display = "block";
-    } else {
-        elem.firstElementChild.style.display = "none";
-    }
-};
 var displayWelcome = function(){
     if (articlesOpened > 0) {
         welcomePage.style.display = 'none';
@@ -145,13 +133,5 @@ for (i = 0; i < displayArticles.length; i++){
     displayArticles[i].addEventListener("click", function(e){
         toggleHighlight(e)
         displayWelcome();
-    })
-}
-for (i = 0; i < projectImages.length; i++) {
-    projectImages[i].addEventListener("mouseenter", function(e){
-        addOverlay(e.target, true)
-    })
-    projectImages[i].addEventListener("mouseleave", function(e){
-        addOverlay(e.target, false)
     })
 }

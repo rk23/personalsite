@@ -5,70 +5,70 @@ function eventWindowLoaded() {
 function canvasSupport () {
     return !!document.createElement("canvas").getContext;
 }
-
 function canvasApp() {
-
     if (!canvasSupport()) {
         return;
     }
-
     function drawScreen() {
 
-        ctx.clearRect(0, 0, c.width, c.height);
+        //Only execute the following code if the canvas element is visible.
+        //This line of code reduces ~9% browser CPU usage to <2% CPU usage when
+        //canvas element is hidden.
+        if (c.clientHeight !== 0) {
 
-        mercury.x = mercuryOrbit.centerX + Math.cos(mercuryOrbit.angle) * mercuryOrbit.radius;
-        mercury.y = mercuryOrbit.centerY + Math.sin(mercuryOrbit.angle) * mercuryOrbit.radius;
+            ctx.clearRect(0, 0, c.width, c.height);
 
-        venus.x = venusOrbit.centerX + Math.cos(venusOrbit.angle) * venusOrbit.radius;
-        venus.y = venusOrbit.centerY + Math.sin(venusOrbit.angle) * venusOrbit.radius;
+            mercury.x = mercuryOrbit.centerX + Math.cos(mercuryOrbit.angle) * mercuryOrbit.radius;
+            mercury.y = mercuryOrbit.centerY + Math.sin(mercuryOrbit.angle) * mercuryOrbit.radius;
 
-        earth.x = earthOrbit.centerX + Math.cos(earthOrbit.angle) * earthOrbit.radius;
-        earth.y = earthOrbit.centerY + Math.sin(earthOrbit.angle) * earthOrbit.radius;
+            venus.x = venusOrbit.centerX + Math.cos(venusOrbit.angle) * venusOrbit.radius;
+            venus.y = venusOrbit.centerY + Math.sin(venusOrbit.angle) * venusOrbit.radius;
 
-        mars.x = marsOrbit.centerX + Math.cos(marsOrbit.angle) * marsOrbit.radius;
-        mars.y = marsOrbit.centerY + Math.sin(marsOrbit.angle) * marsOrbit.radius;
+            earth.x = earthOrbit.centerX + Math.cos(earthOrbit.angle) * earthOrbit.radius;
+            earth.y = earthOrbit.centerY + Math.sin(earthOrbit.angle) * earthOrbit.radius;
 
-        jupiter.x = jupiterOrbit.centerX + Math.cos(jupiterOrbit.angle) * jupiterOrbit.radius;
-        jupiter.y = jupiterOrbit.centerY + Math.sin(jupiterOrbit.angle) * jupiterOrbit.radius;
+            mars.x = marsOrbit.centerX + Math.cos(marsOrbit.angle) * marsOrbit.radius;
+            mars.y = marsOrbit.centerY + Math.sin(marsOrbit.angle) * marsOrbit.radius;
 
-        mercuryOrbit.angle += mercury.speed;
-        venusOrbit.angle += venus.speed;
-        earthOrbit.angle += earth.speed;
-        marsOrbit.angle += mars.speed;
-        jupiterOrbit.angle += jupiter.speed;
+            jupiter.x = jupiterOrbit.centerX + Math.cos(jupiterOrbit.angle) * jupiterOrbit.radius;
+            jupiter.y = jupiterOrbit.centerY + Math.sin(jupiterOrbit.angle) * jupiterOrbit.radius;
 
+            mercuryOrbit.angle += mercury.speed;
+            venusOrbit.angle += venus.speed;
+            earthOrbit.angle += earth.speed;
+            marsOrbit.angle += mars.speed;
+            jupiterOrbit.angle += jupiter.speed;
 
-        ctx.fillStyle = mercury.color;
-        ctx.beginPath();
-        ctx.arc(mercury.x, mercury.y, 2.24, 0, Math.PI * 2, true);
-        ctx.closePath();
-        ctx.fill();
+            ctx.fillStyle = mercury.color;
+            ctx.beginPath();
+            ctx.arc(mercury.x, mercury.y, 2.24, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
 
-        ctx.fillStyle = venus.color;
-        ctx.beginPath();
-        ctx.arc(venus.x, venus.y, 6, 0, Math.PI * 2, true);
-        ctx.closePath();
-        ctx.fill();
+            ctx.fillStyle = venus.color;
+            ctx.beginPath();
+            ctx.arc(venus.x, venus.y, 6, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
 
-        ctx.fillStyle = earth.color;
-        ctx.beginPath();
-        ctx.arc(earth.x, earth.y, 6, 0, Math.PI * 2, true);
-        ctx.closePath();
-        ctx.fill();
+            ctx.fillStyle = earth.color;
+            ctx.beginPath();
+            ctx.arc(earth.x, earth.y, 6, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
 
-        ctx.fillStyle = mars.color;
-        ctx.beginPath();
-        ctx.arc(mars.x, mars.y, 3, 0, Math.PI * 2, true);
-        ctx.closePath();
-        ctx.fill();
+            ctx.fillStyle = mars.color;
+            ctx.beginPath();
+            ctx.arc(mars.x, mars.y, 3, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
 
-        ctx.fillStyle = jupiter.color;
-        ctx.beginPath();
-        ctx.arc(jupiter.x, jupiter.y, 20, 0, Math.PI * 2, true);
-        ctx.closePath();
-        ctx.fill();
-        //
-        //last = ctx;
+            ctx.fillStyle = jupiter.color;
+            ctx.beginPath();
+            ctx.arc(jupiter.x, jupiter.y, 20, 0, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.fill();
+        }
     }
 
     var c = document.getElementById("planets");
@@ -77,7 +77,6 @@ function canvasApp() {
     var background = document.getElementById("space");
     var bctx = background.getContext("2d");
 
-
     var centerXOffset = 400;
     var centerYOffset = 350;
     if (window.innerWidth < 800) {
@@ -85,12 +84,10 @@ function canvasApp() {
         centerYOffset = 350;
     }
 
-
     bctx.beginPath();
     bctx.arc(centerXOffset, centerYOffset, 50, 0, 2 * Math.PI);
     bctx.fillStyle = 'gold';
     bctx.fill();
-
 
     var mercuryOrbit = {centerX: centerXOffset, centerY: centerYOffset, radius: 90, angle: 90};
     var mercury = {x: 0, y: 0, speed: .0145, color: 'grey'};
@@ -107,8 +104,5 @@ function canvasApp() {
     var jupiterOrbit = {centerX: centerXOffset, centerY: centerYOffset, radius: 310, angle: 10}
     var jupiter = {x: 0, y: 0, speed: .000235, color: 'tan'}
 
-
-
     setInterval(drawScreen, 33);
-
 }
