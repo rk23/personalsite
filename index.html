@@ -63,14 +63,12 @@ layout: default
         </li>
         <li><a href="#6" class="display-article" name="6">Get in touch</a></li>
       </ol>
-
-      <button name="start" id="start-button" style="width: 100%">Start Here</button>
+      <button name="start" id="start-button" style="width: 100%;">Start Here</button>
       <!--<div id="social-media">-->
         <!--<img src="/images/github-icon.png">-->
         <!--<img src="/images/linkedin-icon.png">-->
         <!--<img src="/images/fb-icon.png">-->
       <!--</div>-->
-
     </div>
     <section id="0">
       <canvas id="space" width="800px" height="700px" style="position: absolute; z-index: 0">
@@ -440,7 +438,7 @@ end
         {% endhighlight %}
       </article>
       <article class="nested-article hide" id="3" >
-        <img src="/images/iot.png">
+        <img src="/images/section2-header.png">
         <h1>3. Here are my portfolio projects</h1>
         <!--<h2>portfolio</h2>-->
         <div class="portfolio-pictures" style="background-image: url('/images/whetstone.png');  ">
@@ -463,9 +461,11 @@ end
             <p>dominion - an online rendition of the card game</p>
           </div>
         </div>
-        <!--<div class="portfolio-pictures" style="background-image: url('/images/pt_logo.png'); background-size: contain; background-repeat: no-repeat; background-position: center">-->
-        <!--<p>.</p>-->
-        <!--</div>-->
+        <div class="portfolio-pictures" style="background-image: url('/images/pt_logo.png'); background-size: contain; background-repeat: no-repeat; background-position: center">
+          <div class="picture-overlay">
+            <p>prioritize travel - a saving incentive app for the expedia hackathon to encourage travel</p>
+          </div>
+        </div>
         <div class="portfolio-pictures" style="background-image: url('/images/speqtre.png');">
           <div class="picture-overlay">
             <p>bike recovery network / speqtre - an iot solution to bike theft</p>
@@ -479,22 +479,71 @@ end
       </article>
       <article class="nested-article hide" id="3.1" >
         <h3>Whetstone</h3>
-        <p>This is personally my favorite project I co-made at GA. It is something that I actually look forward to using once we reach a point where we can call it an MVP. I worked on it with a friend in the class and we put a lot of time into it. One of the most interesting challenges we faced was working with the asynchrony of node.js and using a synchronous cron job, and if I had to do it over I wouldn't change anything about it. Read below for a description of what it's supposed to do.</p><br>
-        <p>The point is to keep you accountable for some sort of creative/personal goal you set. It's like doing those 30/60 day challenges but with more motivators to get to it. We have the option to invite friends and set a daily "incentive" price. If you don't submit proof of whatever the goal was, then you pay that incentive to the pot and it gets shared among all your friends at the end of your goal.</p><br>
-        <p>So, for example, you could set a goal to paint three times a week for a month with three of your friends. After painting, you take a picture and upload it to our site. It then records that submission and shows it to all the friends in your group so they can keep you accountable as well. If you were to only have submitted 2x in one week, and you had an incentive of $5/day to keep you painting, then you'd pay $5 to the pot to be split with all your friends at the end.</p><br>
-        <p>At the point of writing, the splash page copy hasn't been written yet. Most functionality will have to be seen by registering.</p>
+        <p>
+          Whetstone was built with a Node/Express server, MongoDB persistence, the Materialize CSS library, and jQuery
+          for animations and Ajax routing. The point is to keep you accountable for some sort of creative/personal goal
+          you set. It's like doing those 30/60 day challenges but with more motivators to get to it. We have the option
+          to invite friends and set a daily "incentive" price. If you don't submit proof of whatever the goal was, then
+          you pay that incentive to the pot and it gets shared among all your friends at the end of your goal.
+        </p><br>
+        <p>
+          We deliberately chose not to make it a SPA with Angular because there weren’t many actions required by the
+          user – simple login/logout, goal creation, submission entry and viewing submissions was about all that’s
+          required of the user so adding Angular would have weighed down the app a lot without providing that much
+          value to the end user.
+        </p><br>
+        <p>The biggest design challenge we faced was the synchronisity of making a submission by a certain time and
+          the asychrony of Node. We solved this by using an asynchronous control flow package along with a chron
+          job to keep track of the time.
+        </p><br>
+        <p>
+          At the point of writing, the splash page copy hasn't been written yet. Most functionality will have to be
+          seen by registering. It is currently still in development but you can find it here for now: <br>
+          <a target="_blank" href="http://whetstone-dev.us-west-2.elasticbeanstalk.com/">whetstone-dev.us-west-2.elasticbeanstalk.com</a>
+        </p>
       </article>
       <article class="nested-article hide" id="3.2" >
         <h3>Parse</h3>
-        <p>Coming soon</p>
+        <p>Parse was built in under a week and a half by a team of four of us with Ruby on Rails and jQuery with
+          Foundation as the CSS library. It takes a block of text, applies bucket sort to it to count all the unique
+          words, returns the most frequent words in a descending list as well as highlights the words according to
+          their frequency.
+        </p><br>
+        <p>
+          I was responsible for implementing the backend routing, Ajax routing and state change, implementing the
+          algorithm, and frequency highlighting.
+        </p><br>
+        <p>
+          I’ve been trying to learn languages for years and the idea came from a frustration with most teaching sources
+          giving verb conjugation lists for you to memorize. Most of those conjugations you never see in real contexts.
+          By using this system, you get a vocab list of the most used words in any language in real contexts, like a
+          newspaper or short story. It’s intended for people who have an intermediate understanding of a language but
+          need to find that vocabulary to study.
+        </p><br>
+        <p>
+          You can find it at: <a target="_blank" href="http://parse-lexicon.herokuapp.com">parse-lexicon.herokuapp.com</a>
+        </p>
       </article>
       <article class="nested-article hide" id="3.3" >
         <h3>Hobbyhorse</h3>
-        <p>Coming soon</p>
+        <p>Hobbyhorse, for lack of a better name, is an interest-based social network built with a Node/Express
+          backend, Postgresql relational persistence, and jQuery for Ajax routing and state change. It was my first
+          fully implemented Create/Read/Update/Delete web application where I learned a lot about Postgresql
+          migrations.
+        </p><br>
+        <p>
+          You can find it at: <a target="_blank" href="http://immense-coast-6256.herokuapp.com/">immense-coast-6256.herokuapp.com/</a>
+        </p>
       </article>
       <article class="nested-article hide" id="3.4" >
         <h3>Dominion</h3>
-        <p>Coming soon</p>
+        <p>
+          Dominion is a mobile friendly, fully functional online representation of the card game Dominion built
+          statically with object oriented Javascript and jQuery.
+        </p><br>
+        <p>
+          You can find it ready to play at: <a target="_blank" href="http://rk23.github.io">rk23.github.io</a>
+        </p>
       </article>
       <article class="nested-article hide" id="3.5" >
         <h3>Prioritize Travel</h3>

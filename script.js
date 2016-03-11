@@ -16,6 +16,13 @@ var section5        = document.getElementsByClassName("section5");
 var sections        = [section1, section2, section3, section4, section5];
 var articlesOpened  = 0;
 
+var image = document.images[0];
+var downloadingImage = new Image();
+downloadingImage.onload = function(){
+    image.src = this.src;
+};
+downloadingImage.src = "http://an.image/to/aynchrounously/download.jpg";
+
 var addOverlay = function(elem, apply){
     if(apply){
         elem.firstElementChild.style.display = "block";
