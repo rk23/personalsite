@@ -7,6 +7,7 @@ var projectImages   = document.querySelector(".portfolio img");
 var welcomePage     = document.getElementById('0');
 var start           = document.getElementById("start");
 var startButton     = document.getElementById("start-button");
+var topButton       = document.getElementById("top-button");
 var articles        = document.getElementsByClassName("content-box")[0].children;
 var section1        = document.getElementsByClassName("section1");
 var section2        = document.getElementsByClassName("section2");
@@ -21,6 +22,11 @@ var displayWelcome = function(){
         welcomePage.style.display = 'none';
     } else {
         welcomePage.style.display = 'block';
+    }
+    if (articlesOpened > 3) {
+        topButton.style.display = 'block'
+    } else {
+        topButton.style.display = 'none'
     }
 };
 var toggleHighlight = function(e){
@@ -55,6 +61,7 @@ var hideAll = function(){
         articles[i].style.display = 'none';
     }
     welcomePage.style.display = "block";
+    topButton.style.display = 'none'
     articlesOpened = 0;
 };
 var hideSection = function(elems, sectionNumber){
@@ -88,6 +95,7 @@ var openTrack = function(sectionNumbers){
         article.style.display = "block"
         articlesOpened++;
     })
+    topButton.style.display = 'block'
 };
 
 logo.addEventListener("click", function(){

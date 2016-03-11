@@ -66,9 +66,10 @@ layout: default
       <button name="start" id="start-button" style="width: 100%; background-color: salmon; color: white;">Start Here</button>
     </div>
 
-    <section class="content-box">
+    <section class="content-box" id="top">
       <section id="0">
-        <img src="http://d3g4ccbvy0my5n.cloudfront.net/images/whale.png" style="width: 150%; max-width: 150%; margin-left: -150px;" >
+        <!--<img src="http://d3g4ccbvy0my5n.cloudfront.net/images/whale.png" style="width: 150%; max-width: 150%; margin-left: -150px;" alt="The Whale Wins Mural, Fremont, WA, Kyler Martz" title="The Whale Wins Mural, Fremont, WA, Kyler Martz">-->
+        <img src="/images/portrait.png" id="portrait-picture" >
         <!--<canvas id="space" width="800px" height="700px" style="position: absolute; z-index: 0">-->
         <!--</canvas>-->
         <!--<canvas id="planets" width="800px" height="700px" style="position: absolute; z-index: 1">-->
@@ -76,10 +77,10 @@ layout: default
       </section>
       <article class="nested-article hide" id="start">
         <h1>Welcome to my interactive portfolio!</h1>
-        <p>First of all, thank you for taking the time to learn more about me. If you want to get started right way, here are some pre-defined paths that will open relevant sections.</p>
-        <div style="text-align: center; margin-top: 20px">
-          <button id="employers" style="display: inline-block; min-width: 45%">Employers</button>
-          <button id="friends" style="display: inline-block; min-width: 45%">Friends and Family</button>
+        <p>Thank you for taking the time to learn more about me. If you want to get started right way, here are some pre-defined paths that will open relevant sections.</p>
+        <div id="track-select">
+          <button id="employers">Employers</button>
+          <button id="friends">Friends and Family</button>
         </div>
         <br>
         <p>I want to explain my design because, as you can see by now, this website does not look like a normal website and, though it's easy once you get it, it doesn't operate like one either. </p><br>
@@ -577,6 +578,7 @@ end
       </article>
     </section>
 
+    <a href="/#top"><button id="top-button">&uArr;</button></a>
   </section>
 
 </div>

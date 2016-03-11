@@ -1,20 +1,17 @@
 ---
-permalink: /404/
+permalink: /404.html
 ---
-
-<!DOCTYPE html>
 <html>
 
 {% include head.html %}
 
 <body style="background-color: black; overflow: hidden !important">
-
-<canvas id="space-only" width="1600px" height="1000px" style="position: absolute; z-index: 0; margin-left: 0; top: 0">
+<canvas id="space" width="1600px" height="1000px" style="position: absolute; z-index: 0">
 </canvas>
-
-<div style="text-align: center; color: whitesmoke; margin-top: 5vh; z-index: 10">
-    <img src="/images/whale.png" width="600px">
-    <h1 style="font-family: medium-content-serif-font,Georgia,Cambria,'Times New Roman',Times,serif;"><em>404 - Page Not Found</em></h1>
+<canvas id="planets" width="1600px" height="1000px" style="position: absolute; z-index: 1">
+</canvas>
+<div style="text-align: center; color: whitesmoke; z-index: 10">
+    <h1 style="font-family: medium-content-serif-font,Georgia,Cambria,'Times New Roman',Times,serif; font-size: 48px;"><em>404 - Page Not Found</em></h1>
     <a href="localhost:4000"><button style="color: white;">Return Home</button></a>
 </div>
 

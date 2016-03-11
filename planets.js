@@ -71,17 +71,31 @@ function canvasApp() {
         }
     }
 
+
     var c = document.getElementById("planets");
     var ctx = c.getContext("2d");
 
     var background = document.getElementById("space");
     var bctx = background.getContext("2d");
 
-    var centerXOffset = 400;
-    var centerYOffset = 350;
+    var centerXOffset = 300;
+    var centerYOffset = 300;
     if (window.innerWidth < 800) {
-        centerXOffset = 400;
-        centerYOffset = 350;
+        centerXOffset = 200;
+        centerYOffset = 250;
+    }
+
+    for (i = 0; i < 10000; i++){
+
+        var x = Math.random(background.width) * 2000;
+        var y = Math.random(background.height) * 2000;
+        var radius = Math.random();
+
+        bctx.fillStyle = "white";
+        bctx.beginPath();
+        bctx.arc(x,y,radius,0,Math.PI*2,true);
+        bctx.closePath();
+        bctx.fill();
     }
 
     bctx.beginPath();
