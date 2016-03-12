@@ -89,17 +89,30 @@ a.new-tab:hover::after {
 #start {
   //margin-top: 50px;
 }
-#portrait-picture {
-  width: 40%;
-  margin-left: 50px;
-  margin-top: -100px;
+#ptga {
+  width: 100%;
+  left: 0px;
+  margin-top: 20px;
   max-width: 100%;
+  z-index: 0;
   position: fixed;
+}
+#pg {
+  position: fixed;
+  top: 150px;
+  right: 230px;
+}
+#sail {
+  position: fixed;
+  width: 100px;
+  left: 300px;
+  bottom: 20px;
 }
 #start-button {
   margin-bottom: 200px;
   width: 100%;
   color: #111;
+  background-color: #fdfdfd;
 }
 #start-button:hover {
   background-color: #32B29E;
@@ -244,6 +257,7 @@ ol {
   position:fixed;
   overflow-y:auto;
   overflow-x:hidden;
+  z-index: 1;
 }
 .level2 {
   font-weight: 300;
@@ -431,6 +445,10 @@ label > .label-body {
     margin-left: 0;
   }
 
+  .content {
+  margin-right: 20px;
+}
+
 }
 
 
@@ -468,6 +486,10 @@ label > .label-body {
   }
   canvas {
     margin-top: 10px;
+  }
+  #ptga {
+    margin-top: 0px;
+    bottom: 0px;
   }
   .content {
     margin: 0;
@@ -510,10 +532,13 @@ label > .label-body {
     background-color: white;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   }
-  #portrait-picture {
-    width: 80%;
+  #ptga {
     margin-top: 0px;
     max-width: 100%;
     margin-left: 0px;
   }
+  #pg {
+    display: none;
+  }
+
 }
