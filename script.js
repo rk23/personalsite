@@ -3,12 +3,11 @@ var employerTrack   = document.getElementById("employers");
 var friendsTrack    = document.getElementById("friends");
 var expandables     = document.getElementsByClassName("expandable");
 var displayArticles = document.getElementsByClassName("display-article");
-var projectImages   = document.querySelector(".portfolio img");
 var welcomePage     = document.getElementById('0');
 var start           = document.getElementById("start");
 var startButton     = document.getElementById("start-button");
 var topButton       = document.getElementById("top-button");
-var articles        = document.getElementsByClassName("content-box")[0].children;
+var articles        = document.getElementsByClassName("content")[0].children;
 var section1        = document.getElementsByClassName("section1");
 var section2        = document.getElementsByClassName("section2");
 var section3        = document.getElementsByClassName("section3");
@@ -132,9 +131,11 @@ for (var i = 0; i < expandables.length; i++){
     expandables[i].addEventListener("click", function(e){
         if (e.target.parentElement.lastElementChild.style.display == 'block'){
             e.target.parentElement.lastElementChild.style.display = "none";
+            e.target.classList.remove('active')
             hideSection(sections[parseInt(e.target.name) - 1], e.target.name)
         } else {
             e.target.parentElement.lastElementChild.style.display = "block";
+            e.target.classList.add('active')
         }
     })
 }

@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Reed Kinning's Interactive Portfolio
+title: Reed Kinning
 email: reed.kinning@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Intended for employers and curious individuals.
+  Interactive portfolio of Reed Kinning, a Seattle-based software developer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://reedkinning.com" # the base hostname & protocol for your site
 github_username:  rk23

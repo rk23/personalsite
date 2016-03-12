@@ -1,3 +1,12 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: salmon;
+  z-index: 5;
+}
 p {
   margin: 0;
 }
@@ -9,9 +18,64 @@ a {
 a:visited {
   color: black;
 }
+a:not(.active):hover {
+  text-decoration: none;
+}
+a.active:hover {
+  text-decoration: none;
+}
+li ol {
+  display: none;
+}
 .active {
-  background-color: yellow;
+  //text-decoration: underline;
+  //background-color: yellow;
   //background-color: #BBFF93;
+}
+a.active::after {
+  font-size: 16px;
+  padding: 0 5px;
+  display: inline-block;
+  position: absolute;
+  color: #4D5ACC;
+  content: " ✔";
+}
+a.reed.active::after {
+  font-size: 20px;
+  padding: 0 5px;
+  display: inline-block;
+  position: absolute;
+  color: #4D5ACC;
+  content: " ✌";
+}
+a.active:hover::after {
+  margin: 0 5px;
+  font-size: 20px;
+  padding: 0 1px;
+  padding-bottom: 5px;
+  display: inline-block;
+  position: absolute;
+  text-decoration: none;
+  color: #4D5ACC;
+  font-weight: 600;
+  content: " −";
+}
+a:not(.active):not(.new-tab):not(.download):hover::after {
+  color: #4D5ACC;
+  font-size: 20px;
+  padding: 0 5px;
+  padding-bottom: 5px;
+  position: absolute;
+  font-weight: 600;
+  content: " +";
+}
+a.download:hover::after {
+  color: #4D5ACC;
+  content: " ⇲";
+}
+a.new-tab:hover::after {
+  color: #4D5ACC;
+  content: " ↗";
 }
 #logo {
   font-variant: small-caps;
@@ -27,13 +91,31 @@ a:visited {
 }
 #portrait-picture {
   width: 40%;
-  margin-left: 100px;
+  margin-left: 50px;
   margin-top: -100px;
   max-width: 100%;
-  position: absolute;
+  position: fixed;
 }
 #start-button {
   margin-bottom: 200px;
+  width: 100%;
+  color: #111;
+}
+#start-button:hover {
+  background-color: #32B29E;
+  color: #fdfdfd;
+}
+button.active#start-button {
+  background-color: #32B29E;
+  color: #fdfdfd;
+}
+#employers:hover {
+  background-color: #32B29E;
+  color: #fdfdfd;
+}
+#friends:hover {
+  background-color: #32B29E;
+  color: #fdfdfd;
 }
 #track-select {
   text-align: center;
@@ -52,8 +134,11 @@ a:visited {
   border-radius: 5px;
   font-size: 20px;
   //background-color: #4D5ACC;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   color: black;
+}
+#bottom {
+  //margin-bottom: 100px;
+  color: #fdfdfd;
 }
 article {
   margin-bottom: 20px;
@@ -114,16 +199,9 @@ article {
     border-radius: 2px;
     width: 110%;
     max-width: 200%;
-    //margin-left: -25px;
-    //margin-top: 30px;
   }
 }
-.background {
-  /*margin: 20px 150px;*/
-
-  /*height: 97vh;*/
-}
-.content {
+.container {
   position: absolute;
   width: 92%;
   min-height: 87vh;
@@ -131,22 +209,7 @@ article {
   right: 50px;
   margin-top: 40px;
   margin-bottom: 40px;
-  //border-top: 1px solid black;
-  //border-bottom: 1px solid black;
-  //border-left: 1px solid black;
-  //border-right: 1px solid black;
   background-color: #fdfdfd;
-}
-#social-media {
-  //text-align: center;
-  //margin-left: 15px;
-  //margin-bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
-#social-media img {
-  width: 15%;
-  margin:0 5%;
 }
 ol {
   counter-reset: section;                /* Creates a new instance of the
@@ -169,7 +232,7 @@ ol {
   //margin-right: 5px;
 
 }
-.tractatus-wrapper {
+.tractatus {
   padding-right: 15px;
   padding-left: 15px;
   margin: 50px 0 0 5%;
@@ -195,7 +258,7 @@ ol {
   font-weight: 300;
   font-size: 18px;
 }
-.content-box {
+.content {
   //top: 30px;
   //bottom: 0;
   //position:fixed;
@@ -397,10 +460,7 @@ label > .label-body {
     font-size: 1em;
     line-height: 1.25em;
   }
-  .background {
-    margin: 0 20px;
-  }
-  .content {
+  .container {
     left: 10px;
     right: 10px;
     width: inherit;
@@ -409,12 +469,12 @@ label > .label-body {
   canvas {
     margin-top: 10px;
   }
-  .content-box {
+  .content {
     margin: 0;
     width: 90%;
     min-height: auto;
   }
-  .tractatus-wrapper {
+  .tractatus {
     margin-left: 0;
     margin-top: 20px;
     position: relative;
@@ -448,6 +508,7 @@ label > .label-body {
     bottom: 15px;
     right:15px;
     background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   }
   #portrait-picture {
     width: 80%;
