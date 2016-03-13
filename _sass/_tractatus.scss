@@ -101,6 +101,9 @@ article {
 .underline {
   text-decoration: underline;
 }
+.theme-color {
+  color: salmon;
+}
 
 
 
@@ -132,6 +135,12 @@ article {
   font-variant: normal;
   font-weight: 300;
   font-size: 18px;
+}
+.tv-column {
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 150px;
 }
 #logo {
   font-variant: small-caps;
