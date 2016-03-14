@@ -32,17 +32,19 @@ article {
   }
 
   h1 {
-    font-weight: 700;
-    font-size: 2.5em;
+    font-weight: 600;
+    font-size: 2.25em;
     margin-left: -2.25px;
     line-height: 1.05em;
     letter-spacing: -.02em;
+    border-bottom: 1px dashed salmon;
   }
+
   h2 {
     margin-bottom: 0;
     font-size: 2.25em;
     line-height: 1.25em;
-    font-weight: 700;
+    font-weight: 600;
   }
   h3 {
     margin-bottom: 0;
@@ -104,6 +106,10 @@ article {
 .theme-color {
   color: salmon;
 }
+.thin {
+  font-weight: 100;
+  border: none;
+}
 
 
 
@@ -123,6 +129,9 @@ article {
   overflow-x:hidden;
   z-index: 1;
 }
+#nav {
+  margin-top: 10px;
+}
 .level2 {
   font-weight: 300;
   margin-top: 10px;
@@ -136,11 +145,72 @@ article {
   font-weight: 300;
   font-size: 18px;
 }
-.tv-column {
-  width: 32%;
+.column {
+  width: 30%;
   display: inline-block;
   vertical-align: top;
-  min-width: 150px;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+article .column h4 {
+  font-weight: 100;
+  font-size: 20px;
+}
+.badge {
+  font-size: 0px;
+  border-radius: 5px;
+  margin: 8px 0;
+  margin-left: 0px;
+}
+.badge .inner-left {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 4px 4px 6px;
+  background-color: #4a3c3c;
+  color: #fdfdfd;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.badge .inner-right {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 6px 4px 4px;
+  color: white;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-right: -2px;
+}
+.badge .experienced {
+  background-color: #91c743;
+}
+.badge .good {
+  background-color: #32B29E;
+}
+.badge .familiar {
+  background-color: #3b7aaa;
+}
+.badge .minimal {
+  background-color: #4D5ACC;
+
+}
+.badge .node {
+  background-color: #91c743;
+}
+.badge .ror {
+  background-color: #9a2330;
+}
+.badge .python {
+  background-color: #3b7aaa;
+}
+.badge .java {
+  background-color: #da2427;
+}
+.badge .js {
+  background-color: #d3c45b;
+}
+.badge .flask {
+  background-color: #f1f1f1;
+  color: #111;
 }
 #logo {
   font-variant: small-caps;
@@ -149,6 +219,7 @@ article {
   font-size: 48px;
   cursor: pointer;
   margin-bottom: 0;
+  line-height: 1em;
 }
 #background-img {
   width: 100%;
@@ -161,12 +232,12 @@ article {
 #start-button {
   margin-bottom: 200px;
   width: 100%;
-  color: #111;
-  background-color: #fdfdfd;
+  color: #fdfdfd;
+  background-color: #32B29E;
 }
 #start-button:hover {
-  background-color: #32B29E;
-  color: #fdfdfd;
+  background-color: #fdfdfd;
+  color: #111;
 }
 button.active#start-button {
   background-color: #32B29E;
@@ -263,6 +334,25 @@ a.reed.active:hover::after {
   margin-top: -75px;
   height: 75px;
   visibility: hidden;
+}
+.core-capabilities {
+  margin: 100px 0;
+
+  img {
+    width: 75%;
+    height: 75%;
+  }
+
+  .right {
+    width: 50%;
+    display: inline-block;
+    float: right;
+  }
+  .left {
+    width: 50%;
+    display: inline-block;
+    float: left;
+  }
 }
 .portfolio {
   margin-bottom: 50px;
@@ -389,30 +479,32 @@ input[type="button"].button-primary:focus {
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (max-width: 700px) {
-  h1 {
-    font-size: 2em;
-    line-height: 1.25em;
-  }
-  h2 {
-    font-size: 1.625em;
-    line-height: 1.15em;
-  }
-  h3 {
-    font-size: 1.375em;
-    line-height: 1.136em;
-  }
-  h4 {
-    font-size: 1.125em;
-    line-height: 1.1em;
-  }
-  h5 {
-    font-weight: 600;
-    font-size: 1.05em;
-    line-height: 1.15em;
-  }
-  p, li {
-    font-size: 1em;
-    line-height: 1.25em;
+  article {
+    h1 {
+      font-size: 1.625em;
+      line-height: 1.25em;
+    }
+    h2 {
+      font-size: 1.625em;
+      line-height: 1.15em;
+    }
+    h3 {
+      font-size: 1.375em;
+      line-height: 1.136em;
+    }
+    h4 {
+      font-size: 1.125em;
+      line-height: 1.1em;
+    }
+    h5 {
+      font-weight: 600;
+      font-size: 1.05em;
+      line-height: 1.15em;
+    }
+    p, li {
+      font-size: 1em;
+      line-height: 1.25em;
+    }
   }
   .container {
     left: 10px;
