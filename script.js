@@ -1,5 +1,6 @@
 var logo            = document.getElementById("logo");
 var employerTrack   = document.getElementById("employers");
+var freelanceTrack  = document.getElementById("freelance");
 var friendsTrack    = document.getElementById("friends");
 var expandables     = document.getElementsByClassName("expandable");
 var displayArticles = document.getElementsByClassName("display-article");
@@ -86,6 +87,8 @@ var hideSection = function(elems, sectionNumber){
     displayWelcome()
 };
 var openTrack = function(sectionNumbers){
+    start.style.display = "none";
+    startButton.classList.remove("active");
     sectionNumbers.forEach(function(sectionNumber){
         var element = document.getElementsByName(sectionNumber)[0]
         if (element.classList.contains("expandable")){
@@ -116,15 +119,13 @@ startButton.addEventListener("click", function(e){
 })
 
 employerTrack.addEventListener("click", function(e){
-    start.style.display = "none";
-    startButton.classList.remove("active");
     openTrack([1, 2, 2.1, 2.2, 3, 6])
 })
-
 friendsTrack.addEventListener("click", function(){
-    start.style.display = "none";
-    startButton.classList.remove("active");
-    openTrack([1, 1.1, 1.3, 3, 5])
+    openTrack([1, 1.1, 1.3, 3, 6])
+})
+freelanceTrack.addEventListener("click", function(){
+    openTrack([1, 2, 3, 4, 6])
 })
 
 for (var i = 0; i < expandables.length; i++){

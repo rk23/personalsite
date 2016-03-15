@@ -336,6 +336,10 @@ a.reed.active:hover::after {
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   }
 }
+.track-btn:hover {
+  background-color: #32B29E;
+  color: #fdfdfd;
+}
 #track-select {
   text-align: center;
   margin-top: 20px;
@@ -344,14 +348,7 @@ a.reed.active:hover::after {
     width: 45%;
   }
 }
-#employers:hover {
-  background-color: #32B29E;
-  color: #fdfdfd;
-}
-#friends:hover {
-  background-color: #32B29E;
-  color: #fdfdfd;
-}
+
 #bottom {
   color: #fdfdfd;
 }
