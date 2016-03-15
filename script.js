@@ -118,7 +118,7 @@ startButton.addEventListener("click", function(e){
 employerTrack.addEventListener("click", function(e){
     start.style.display = "none";
     startButton.classList.remove("active");
-    openTrack([1, 2, 2.1, 2.2, 2.3, 3, 6])
+    openTrack([1, 2, 2.1, 2.2, 3, 6])
 })
 
 friendsTrack.addEventListener("click", function(){
