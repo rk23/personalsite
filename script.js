@@ -89,6 +89,7 @@ var hideSection = function(elems, sectionNumber){
 var openTrack = function(sectionNumbers){
     start.style.display = "none";
     startButton.classList.remove("active");
+    hideAll()
     sectionNumbers.forEach(function(sectionNumber){
         var element = document.getElementsByName(sectionNumber)[0]
         if (element.classList.contains("expandable")){
@@ -101,6 +102,7 @@ var openTrack = function(sectionNumbers){
         articlesOpened++;
     })
     topButton.style.display = 'block'
+    displayWelcome()
 };
 
 logo.addEventListener("click", function(){
