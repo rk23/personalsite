@@ -1,5 +1,5 @@
-s3_id: AKIAIXIS6RQZCPKCIKWQ
-s3_secret: 2la1Ytla7cxBMRm8bPrNYK1idbn7oqp3BLRtrMgK
+s3_id: <S3_ID>
+s3_secret: <S3_SECRET>
 s3_bucket: reedkinning.com
 
 # Below are examples of all the available configurations.
